@@ -51,4 +51,5 @@ def page_not_found(e):
     return jsonify({"message": "Ruta no encontrada. Verifica la URL."}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))  # Render asigna dinámicamente el puerto
+    app.run(host='0.0.0.0', port=port, debug=False)  # Asegúrate de desactivar debug en producción

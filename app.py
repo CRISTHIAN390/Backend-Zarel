@@ -11,7 +11,8 @@ load_dotenv()
 app = Flask(__name__)
 
 # Configurar CORS para produccion caso contrario : http://localhost:3000
-CORS(app, resources={r"/*": {"origins": "https://paginazareli.onrender.com"}})
+#CORS(app, resources={r"/*": {"origins": "https://paginazareli.onrender.com"}})
+CORS(app)  
 
 # Configuración de Flask-Mail
 app.config['MAIL_SERVER'] = 'sandbox.smtp.mailtrap.io'
@@ -28,6 +29,13 @@ mail = Mail(app)
 @app.route('/')
 def home():
     return "Bienvenido a la API de Flask Mail. Todo funciona correctamente."
+
+# Ruta para enviar el enlace
+@app.route('/emisora', methods=['GET'])
+def enlace():
+    enlacempc = "https://playerservices.streamtheworld.com/api/livestream-redirect/CRP_MOD.mp3"
+    return jsonify({"url": enlacempc})
+
 
 # Ruta para enviar correos
 @app.route('/send-email', methods=['POST'])

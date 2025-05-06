@@ -1,6 +1,6 @@
-from models.informacion import CategoriaRequest, OBJCategoria
+from models.informacion import OBJCategoria
 
-def obtener_informacion(categoria: CategoriaRequest):
+def obtener_informacion(categoria: str):
     base_url = "https://backend-zarel.onrender.com/static/img/"
 
     datos = {
@@ -46,6 +46,6 @@ def obtener_informacion(categoria: CategoriaRequest):
         ]
     }
 
-    categoria_nombre = categoria.categoria
+    categoria_nombre = categoria   # ✅ Solo usar el string directo
 
-    return datos.get(categoria_nombre, [])
+    return datos.get(categoria_nombre, [])   # ✅ Esto está bien

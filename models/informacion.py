@@ -1,8 +1,5 @@
 from pydantic import BaseModel
 
-class CategoriaRequest(BaseModel):
-    categoria: str
-
 class OBJCategoria(BaseModel):
     id: int
     titulo: str

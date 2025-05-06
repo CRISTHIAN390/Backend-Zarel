@@ -50,9 +50,19 @@ def enlace():
 @app.route('/api/informacion', methods=['POST'])
 def obtener_informacion():
     categoria_data = request.get_json()
-    categoria = CategoriaRequest(**categoria_data)
+    print("JSON recibido:", categoria_data)  # Para confirmar lo que llega
+
+    # Asegurarse de extraer la 'categoria'
+    categoria = categoria_data.get('categoria')   
+
+    # Validación simple por si acaso
+    if not categoria:
+        return jsonify({'error': 'No se recibió categoría'}), 400
+
+
     resultado = informacion.obtener_informacion(categoria)
-    return jsonify(resultado)
+    resultado_serializado = [obj.__dict__ for obj in resultado]  
+    return jsonify(resultado_serializado)
 
 
 

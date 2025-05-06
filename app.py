@@ -3,12 +3,21 @@ from flask_mail import Mail, Message
 from flask_cors import CORS
 from dotenv import load_dotenv
 import os
+from cruds import informacion
+from models.informacion import CategoriaRequest
+from flask import send_from_directory
 
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
 # Inicializar la aplicación Flask
 app = Flask(__name__)
+# Montar la carpeta img para servir archivos estáticos
+
+# Ruta para servir imágenes desde la carpeta img
+@app.route('/static/img/<path:filename>')
+def serve_image(filename):
+    return send_from_directory('img', filename)
 
 # Configurar CORS para produccion caso contrario : http://localhost:3000
 #CORS(app, resources={r"/*": {"origins": "https://paginazareli.onrender.com"}})
@@ -35,6 +44,18 @@ def home():
 def enlace():
     enlacempc = "https://playerservices.streamtheworld.com/api/livestream-redirect/CRP_MOD.mp3"
     return jsonify({"url": enlacempc})
+
+
+@app.post("/api/informacion/")
+def obtener_informacion(categoria: CategoriaRequest):
+    return informacion.obtener_informacion(categoria)
+
+
+
+
+
+
+
 
 
 # Ruta para enviar correos

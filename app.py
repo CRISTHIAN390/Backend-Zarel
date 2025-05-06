@@ -46,11 +46,13 @@ def enlace():
     return jsonify({"url": enlacempc})
 
 
-@app.post("/api/informacion/")
-def obtener_informacion(categoria: CategoriaRequest):
-    return informacion.obtener_informacion(categoria)
-
-
+# Tu endpoint POST
+@app.route('/api/informacion', methods=['POST'])
+def obtener_informacion():
+    categoria_data = request.get_json()
+    categoria = CategoriaRequest(**categoria_data)
+    resultado = informacion.obtener_informacion(categoria)
+    return jsonify(resultado)
 
 
 

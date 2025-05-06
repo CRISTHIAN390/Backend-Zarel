@@ -4,7 +4,6 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 import os
 from cruds import informacion
-from models.informacion import CategoriaRequest
 from flask import send_from_directory
 
 # Cargar variables de entorno desde el archivo .env

@@ -7,7 +7,7 @@ def obtener_informacion(categoria: str):
         "Mundo": [
             OBJCategoria(
                 id=1,
-                titulo="Noticia Mundial 1",
+                titulo="Noticia Mundial 1fddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
                 url=base_url + "tele.png",
                 fecha="2025-05-06",
                 hora="14:30",

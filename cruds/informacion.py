@@ -22,6 +22,24 @@ def obtener_informacion(categoria: str):
                 hora="16:45",
                 descripcion="Descripción de la noticia mundial 2",
                 estado=True
+            ),
+                        OBJCategoria(
+                id=3,
+                titulo="Noticia Mundial 2",
+                url=base_url + "extra.png",
+                fecha="2025-05-06",
+                hora="16:45",
+                descripcion="Descripción de la noticia mundial 2",
+                estado=True
+            ),
+                                    OBJCategoria(
+                id=4,
+                titulo="Noticia Mundial 2",
+                url=base_url + "tele.png",
+                fecha="2025-05-06",
+                hora="16:45",
+                descripcion="Descripción de la noticia mundial 2",
+                estado=True
             )
         ],
         "Peru": [

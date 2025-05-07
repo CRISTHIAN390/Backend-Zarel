@@ -28,7 +28,7 @@ def obtener_informacion(categoria: str):
             OBJCategoria(
                 id=1,
                 titulo="Noticia Perú 1",
-                url=base_url + "tele.png",
+                url=base_url + "extra.png",
                 fecha="2025-05-06",
                 hora="09:15",
                 descripcion="Descripción de la noticia Perú 1",

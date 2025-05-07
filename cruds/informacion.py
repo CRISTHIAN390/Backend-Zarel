@@ -7,11 +7,11 @@ def obtener_informacion(categoria: str):
         "Mundo": [
             OBJCategoria(
                 id=1,
-                titulo="¿Qué presidente habla de esa manera? Nosotros no somos así: Biden sobre Trump en su primera entrevista desde que dejó la Casa Blanca",
+                titulo="¿Que presidente habla de esa manera? Nosotros no somos asi: Biden sobre Trump en su primera entrevista desde que dejó la Casa Blanca",
                 url=base_url + "tele.png",
                 fecha="2025-05-07",
                 hora="05:30",
-                descripcion="Durante la conversación, que ocurrió en Delaware el lunes, Biden afirmó que el mandatario ruso, Vladimir Putin, considera que Ucrania es parte de su país, y que cualquiera que piense que va a dejar de hacerlo si se entrega algún territorio como parte de un acuerdo de paz es simplemente estúpido. Biden habló justo cuando se cumplió el 80 aniversario del Día de la Victoria, que conmemora el fin de la Segunda Guerra Mundial, y aseguró que le preocupaba que las relaciones entre Estados Unidos y Europa se estén rompiendo bajo la presidencia de Donald Trump, lo que cambiaría la historia moderna del mundo",
+                descripcion="Durante la conversacion, que ocurrio en Delaware el lunes, Biden afirmó que el mandatario ruso, Vladimir Putin, considera que Ucrania es parte de su país, y que cualquiera que piense que va a dejar de hacerlo si se entrega algún territorio como parte de un acuerdo de paz es simplemente estúpido. Biden habló justo cuando se cumplió el 80 aniversario del Día de la Victoria, que conmemora el fin de la Segunda Guerra Mundial, y aseguró que le preocupaba que las relaciones entre Estados Unidos y Europa se estén rompiendo bajo la presidencia de Donald Trump, lo que cambiaría la historia moderna del mundo",
                 estado=True
             ),
             OBJCategoria(

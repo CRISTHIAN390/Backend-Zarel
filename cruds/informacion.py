@@ -25,7 +25,7 @@ def obtener_informacion(categoria: str):
             ),
                         OBJCategoria(
                 id=3,
-                titulo="Noticia Mundial 2",
+                titulo="1fddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
                 url=base_url + "extra.png",
                 fecha="2025-05-06",
                 hora="16:45",

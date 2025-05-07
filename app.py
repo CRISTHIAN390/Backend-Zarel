@@ -41,9 +41,8 @@ def home():
 # Ruta para enviar el enlace
 @app.route('/emisora', methods=['GET'])
 def enlace():
-    enlacempc = "https://playerservices.streamtheworld.com/api/livestream-redirect/CRP_MOD.mp3"
+    enlacempc = "https://s6.myradiostream.com/49872/escuchar.mp3"
     return jsonify({"url": enlacempc})
-
 
 # Tu endpoint POST
 @app.route('/api/informacion', methods=['POST'])

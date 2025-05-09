@@ -18,6 +18,12 @@ app = Flask(__name__)
 def serve_image(filename):
     return send_from_directory('img', filename)
 
+# Servir audios desde la carpeta /audio
+@app.route('/static/audio/<path:filename>')
+def serve_audio(filename):
+    return send_from_directory('audio', filename)
+
+
 # Configurar CORS para produccion caso contrario : http://localhost:3000
 #CORS(app, resources={r"/*": {"origins": "https://paginazareli.onrender.com"}})
 CORS(app)  

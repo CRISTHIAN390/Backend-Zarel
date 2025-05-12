@@ -18,6 +18,7 @@ app = Flask(__name__)
 def serve_image(filename):
     return send_from_directory('img', filename)
 
+
 # Servir audios desde la carpeta /audio
 @app.route('/static/audio/<path:filename>')
 def serve_audio(filename):

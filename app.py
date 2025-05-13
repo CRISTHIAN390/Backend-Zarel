@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 from cruds import informacion
 from flask import send_from_directory
-
+from cruds import patrocinador
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
@@ -17,6 +17,12 @@ app = Flask(__name__)
 @app.route('/static/img/<path:filename>')
 def serve_image(filename):
     return send_from_directory('img', filename)
+
+# Ruta para servir imágenes desde la carpeta img/patrocinadores
+@app.route('/static/img/patrocinadores/<path:filename>')
+def serve_image(filename):
+    return send_from_directory('img/patrocinadores', filename)
+
 
 
 # Servir audios desde la carpeta /audio
@@ -78,6 +84,12 @@ def obtener_informacion():
     resultado_serializado = [obj.__dict__ for obj in resultado]  
     return jsonify(resultado_serializado)
 
+
+
+@app.route('/api/patrocinadores', methods=['GET'])
+def get_patrocinadores():
+    datos = patrocinador.obtener_lista()
+    return jsonify(datos)
 
 
 

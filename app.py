@@ -15,12 +15,12 @@ app = Flask(__name__)
 
 # Ruta para servir imágenes desde la carpeta img
 @app.route('/static/img/<path:filename>')
-def serve_image(filename):
+def serviri_img(filename):
     return send_from_directory('img', filename)
 
 # Ruta para servir imágenes desde la carpeta img/patrocinadores
 @app.route('/static/img/patrocinadores/<path:filename>')
-def serve_image(filename):
+def servir_imagenpatro(filename):
     return send_from_directory('img/patrocinadores', filename)
 
 

@@ -3,9 +3,8 @@ from flask_mail import Mail, Message
 from flask_cors import CORS
 from dotenv import load_dotenv
 import os
-from cruds import informacion
 from flask import send_from_directory
-from cruds import patrocinador
+from cruds import informacion,patrocinador,catalogo
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
@@ -22,6 +21,10 @@ def serviri_img(filename):
 @app.route('/static/img/patrocinadores/<path:filename>')
 def servir_imagenpatro(filename):
     return send_from_directory('img/patrocinadores', filename)
+
+@app.route('/static/img/catalogo/<path:filename>')
+def servir_imagencatalog(filename):
+    return send_from_directory('img/catalogo', filename)
 
 
 
@@ -91,7 +94,18 @@ def get_patrocinadores():
     datos = patrocinador.obtener_lista()
     return jsonify(datos)
 
+@app.route('/api/catalogo', methods=['GET'])
+def get_catalogos():
+    datoss = catalogo.obtener_listac()
+    return jsonify(datoss)
 
+
+@app.route('/api/catalogo/enlace', methods=['GET'])
+def get_catalogosurl():
+    # Aquí puedes cambiar la URL dinámicamente si quieres
+    enlace_url = 'https://www.youtube.com/embed/Y-IlMeCCtIg?autoplay=0&mute=1'
+    
+    return jsonify({'enlace_url': enlace_url})
 
 
 

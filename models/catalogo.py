@@ -5,6 +5,6 @@ class OBJCatalogo(BaseModel):
     nombre: str  
     fecha: str
     descripcion: str      
-    videoId: str
+    videoId: str 
     estado: bool
     

@@ -64,7 +64,7 @@ def enlace():
 @app.route('/television', methods=['GET'])
 def get_stream_url():
     # Aquí puedes cambiar la URL dinámicamente si quieres
-    stream_url = 'https://www.youtube.com/embed/Y-IlMeCCtIg?autoplay=1&mute=0'
+    stream_url = 'https://www.youtube.com/embed/Y-IlMeCCtIg?autoplay=1&mute=1'
     
     return jsonify({'stream_url': stream_url})
 

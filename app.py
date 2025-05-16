@@ -103,7 +103,7 @@ def get_catalogos():
 @app.route('/api/catalogo/enlace', methods=['GET'])
 def get_catalogosurl():
     # Aquí puedes cambiar la URL dinámicamente si quieres
-    enlace_url = 'https://www.youtube.com/embed/Y-IlMeCCtIg'
+    enlace_url = 'https://www.youtube.com/embed/Y-IlMeCCtIg?autoplay=1&mute=0'
     
     return jsonify({'enlace_url': enlace_url})
 

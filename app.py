@@ -108,8 +108,6 @@ def get_catalogosurl():
     return jsonify({'enlace_url': enlace_url})
 
 
- 
-
 # Ruta para enviar correos
 @app.route('/send-email', methods=['POST'])
 def send_email():

@@ -11,19 +11,24 @@ def obtener_informacion(categoria: str):
                 url=base_url + "tele.png",
                 fecha="2025-05-07",
                 hora="05:30",
-                #descripcion="Durante la conversacion, que ocurrio en Delaware el lunes, Biden afirmó que el mandatario ruso, Vladimir Putin, considera que Ucrania es parte de su país, y que cualquiera que piense que va a dejar de hacerlo si se entrega algún territorio como parte de un acuerdo de paz es simplemente estúpido. Biden habló justo cuando se cumplió el 80 aniversario del Día de la Victoria, que conmemora el fin de la Segunda Guerra Mundial, y aseguró que le preocupaba que las relaciones entre Estados Unidos y Europa se estén rompiendo bajo la presidencia de Donald Trump, lo que cambiaría la historia moderna del mundo",
-                #descripcion = "Esto es <strong>texto en negrita</strong> y esto es <em>cursiva</em>."
                 descripcion = """
-                <p>Este es el primer párrafo con <strong>algo en negrita</strong>.</p>
-                <br>
-                <p>Este es el segundo párrafo con una palabra en <em>cursiva</em>.</p>
-                <br>
+                <ul>
+                <li><b>Opción 1</b></li>
+                <li><b>Opción 2</b></li>
+                <li><b>Opción 2</b></li>
+                </ul>
                 <p>
                 Durante la conversacion, que ocurrio en Delaware el lunes, Biden afirmó
                 que el mandatario ruso, Vladimir Putin, considera que Ucrania
                 es parte de su país, y que cualquiera que piense que va a dejar
                 de hacerlo si se entrega algún territorio como parte de un acuerdo de 
-                paz es simplemente estúpido. Biden habló justo cuando se cumplió el 
+                paz es simplemente estúpido. 
+                </p>
+                <div class="image-container">
+                    <img src="{base_url}tele.png" alt="Imagen relacionada" class="image-content" />
+                </div> 
+               <p>
+                Biden habló justo cuando se cumplió el 
                 80 aniversario del Día de la Victoria, que conmemora el fin de la 
                 Segunda Guerra Mundial, y aseguró que le preocupaba que las 
                 relaciones entre Estados Unidos y Europa se estén rompiendo 
@@ -48,15 +53,6 @@ def obtener_informacion(categoria: str):
                 fecha="2025-05-06",
                 hora="16:45",
                 descripcion="Quizá sea un poco de todo eso, y la pregunta es de especial importancia cuando, por primera vez en más de un siglo, un presidente de Estados Unidos, el país más grande de los tres, que disputa lo que se entiende por el subcontinente. Donald Trump quiere presionar a sus vecinos: someter sus políticas comerciales a su antojo, dictar sus estrategias de seguridad y controlar los límites del subcontinente, como Panamá y Groenlandia.",
-                estado=True
-            ),
-            OBJCategoria(
-                id=4,
-                titulo="Noticia3",
-                url=base_url + "tele.png",
-                fecha="2025-05-06",
-                hora="16:45",
-                descripcion="Descripción de la noticia mundial 2",
                 estado=True
             )
         ],

@@ -25,7 +25,7 @@ def obtener_informacion(categoria: str):
                 paz es simplemente estúpido. 
                 </p>
                 <div class="image-container">
-                    <img src="{base_url}tele.png" alt="Imagen relacionada" class="image-content" />
+                    <img src="https://backend-zarel.onrender.com/static/img/tele.png" alt="Imagen relacionada" class="image-content" />
                 </div> 
                <p>
                 Biden habló justo cuando se cumplió el 

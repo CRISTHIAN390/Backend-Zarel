@@ -13,14 +13,26 @@ app = Flask(__name__)
 # Montar la carpeta img para servir archivos estáticos
 
 # Ruta para servir imágenes desde la carpeta img
-@app.route('/static/img/<path:filename>')
-def serviri_img(filename):
-    return send_from_directory('img', filename)
+@app.route('/static/img/noticias/mundo/<path:filename>')
+def serviri_imagenesmundo(filename):
+    return send_from_directory('img/noticias/mundo', filename)
+
+
+
+# Ruta para servir imágenes desde la carpeta img/noticias/peru
+@app.route('/static/img/noticias/peru/<path:filename>')
+def servir_imagenesperu(filename):
+    return send_from_directory('img/noticias/peru', filename)
+
+
 
 # Ruta para servir imágenes desde la carpeta img/patrocinadores
 @app.route('/static/img/patrocinadores/<path:filename>')
 def servir_imagenpatro(filename):
     return send_from_directory('img/patrocinadores', filename)
+
+
+
 
 @app.route('/static/img/catalogo/<path:filename>')
 def servir_imagencatalog(filename):

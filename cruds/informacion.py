@@ -32,7 +32,7 @@ def obtener_informacion(categoria: str):
             OBJCategoria(
                 id=2,
                 titulo="EE.UU. y China acuerdan reducir aranceles por 90 días: impacto y riesgos para la economía mundial y el Perú",
-                url=base_url_mundo + "noticia3.png",
+                url=base_url_mundo + "noticia4.png",
                 fecha="2025-05-19",
                 hora="13:40",
                 descripcion = """
@@ -45,7 +45,7 @@ def obtener_informacion(categoria: str):
                  Estados Unidos y China acordaron una reducción significativa de aranceles tras una reunión en Suiza. El acuerdo, con una duración de 90 días, busca aliviar tensiones comerciales y reactivar el intercambio entre ambas economías.
                 </p>
                 <div class="detalle-noticia-image-container-123">
-                    <img src="https://backend-zarel.onrender.com/static/img/noticias/mundo/noticia2.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
+                    <img src="https://backend-zarel.onrender.com/static/img/noticias/mundo/noticia3.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
                     Aunque las reducciones son notables, el pacto es temporal y debe aplicarse antes del 14 de mayo. Su efectividad dependerá de la voluntad política y del impacto que tenga en las relaciones a largo plazo.

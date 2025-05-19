@@ -7,32 +7,33 @@ def obtener_informacion(categoria: str):
         "Mundo": [
             OBJCategoria(
                 id=1,
-                titulo="¿Que presidente habla de esa manera? Nosotros no somos asi: Biden sobre Trump en su primera entrevista desde que dejó la Casa Blanca",
+                titulo="Terror en el Jockey Plaza: Clientes fueron encerrados en tiendas mientras autoridades controlaban la emergencia",
                 url=base_url + "tele.png",
                 fecha="2025-05-07",
                 hora="05:30",
                 descripcion = """
                 <ul>
-                <li><b>Opción 1</b></li>
-                <li><b>Opción 2</b></li>
-                <li><b>Opción 2</b></li>
+                <li><b>Los clientes se refugiaron en las diversas tiendas para ponerse a buen resguardo</b></li>
+                <li><b>La Policía Nacional del Perú explicó lo sucedido</b></li>
+                <li><b>Disparos en el primer piso del establecimiento</b></li>
                 </ul>
                 <p>
-                Durante la conversacion, que ocurrio en Delaware el lunes, Biden afirmó
-                que el mandatario ruso, Vladimir Putin, considera que Ucrania
-                es parte de su país, y que cualquiera que piense que va a dejar
-                de hacerlo si se entrega algún territorio como parte de un acuerdo de 
-                paz es simplemente estúpido. 
+                  Minutos de pánico y terror se vivieron en el centro comercial
+                  Jockey Plaza, ubicado en Santiago de Surco, debido 
+                  a una supuesta balacera.
+                  Ciudadanos se refugiaron en las tiendas del lugar para intentar salvaguardar sus vidas ante la emergencia.
                 </p>
                 <div class="detalle-noticia-image-container-123">
                     <img src="https://backend-zarel.onrender.com/static/img/tele.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                Biden habló justo cuando se cumplió el 
-                80 aniversario del Día de la Victoria, que conmemora el fin de la 
-                Segunda Guerra Mundial, y aseguró que le preocupaba que las 
-                relaciones entre Estados Unidos y Europa se estén rompiendo 
-                bajo la presidencia de Donald Trump, lo que cambiaría la historia moderna del mundo
+                Según testigos, se escucharon disparos en el primer piso del 
+                establecimiento al promediar las 2 de la tarde de este domingo 
+                18 de mayo.
+                Tras los estruendos de aparentemente un arma de fuego, 
+                los clientes corrieron despavoridos. Las autoridades 
+                desplagaron el protocolo correspondiente para actuar según 
+                lo ocurrido.
                 </p>
                 """.strip(),
                 estado=True

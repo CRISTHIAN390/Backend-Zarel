@@ -8,7 +8,7 @@ def obtener_lista():
             "nombre": "Ferreteria Emanuel SAC",
             "imagen": base_url + "ferreteria.jpg",
             "descripcion": "En nuestra distribuidora, ofrecemos una amplia variedad de productos para construcción y remodelación, enfocados en satisfacer tanto a clientes mayoristas como minoristas. Nos esforzamos en brindar materiales de alta calidad y un servicio eficiente para apoyar tus proyectos.",
-            "url": "https://emanuel-y1vr.onrender.com/emanuel/proferreteria",
+            "url": "https://grupoemanuelrlg.com//emanuel/proferreteria",
             "telefono": "999999999",
             "estado": True
         },
@@ -17,7 +17,7 @@ def obtener_lista():
             "nombre": "Hotel Emanuel",
             "imagen": base_url + "hotel.jpg",
             "descripcion": "En nuestro hotel, ofrecemos un espacio acogedor y multifuncional para garantizar una estancia placentera. Nos especializamos en el hospedaje cómodo y seguro, así como en la renta de instalaciones para eventos.",
-            "url": "https://emanuel-y1vr.onrender.com/emanuel/hotel",
+            "url": "https://grupoemanuelrlg.com/emanuel/hotel",
             "telefono": "999999999",
             "estado": True
         },
@@ -26,7 +26,7 @@ def obtener_lista():
             "nombre": "Servicentro Emanuel",
             "imagen": base_url + "servicentro.jpg",
             "descripcion": "En Servicentro Emanuel, nos especializamos en el cuidado y mantenimiento de vehículos de transporte, tanto livianos como pesados. Ofrecemos una gama completa de servicios para garantizar que tu vehículo esté siempre en óptimas condiciones.",
-            "url": "https://emanuel-y1vr.onrender.com/emanuel/servicentro",
+            "url": "https://grupoemanuelrlg.com/emanuel/servicentro",
             "telefono": "999999999",
             "estado": True
         },
@@ -35,7 +35,7 @@ def obtener_lista():
             "nombre": "Complejo deportivo triple G",
             "imagen": base_url + "tripleg.jpg",
             "descripcion": "En nuestro complejo deportivo, brindamos una experiencia única y accesible para deportistas de todas las edades. Ofrecemos instalaciones modernas y seguras, equipadas con la mejor tecnología y diseñadas para crear un ambiente donde los jóvenes y aficionados puedan disfrutar plenamente de sus actividades deportivas favoritas.",
-            "url": "https://emanuel-y1vr.onrender.com/emanuel/complejo",
+            "url": "https://grupoemanuelrlg.com/emanuel/complejo",
             "telefono": "999999999",
             "estado": True
         },

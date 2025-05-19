@@ -58,7 +58,7 @@ def obtener_informacion(categoria: str):
                 titulo='La potencia global que desafiará a EE. UU. y China en 2030: dos países de Latinoamérica podrían convertirse en las próximas “naciones prósperas”',
                 url=base_url_mundo + "noticia6.png",
                 fecha="2025-05-19",
-                hora="14:25",
+                hora="14:30",
                 descripcion = """
                 <ul>
                 <li><b>Brasil y México serán las dos naciones latinoamericanas en el Top 10 mundial según proyecciones de PwC para los próximos 5 años.</b></li>

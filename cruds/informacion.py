@@ -1,5 +1,7 @@
 from models.informacion import OBJCategoria
-
+from collections import deque
+import google.generativeai as genai
+import re
 def obtener_informacion(categoria: str):
     base_url_mundo = "https://backend-zarel.onrender.com/static/img/noticias/mundo/"
     base_url_peru = "https://backend-zarel.onrender.com/static/img/noticias/peru/"
@@ -167,3 +169,101 @@ def obtener_informacion(categoria: str):
     categoria_nombre = categoria   # ✅ Solo usar el string directo
 
     return datos.get(categoria_nombre, [])   # ✅ Esto está bien
+
+# Configuración de la API de Google Generative AI
+API_KEY = "AIzaSyCmjRN_xL07aRkftfoUba3nHW-_hkrZwnc"
+genai.configure(api_key=API_KEY)
+
+# Datos de la radio (constantes para acceso rápido)
+RADIO_INFO = {
+    "nombre": "Luminares",
+    "año_fundacion": 1990,
+    "ubicacion": "Huamachuco, Perú",
+    "region": "Sierra de La Libertad",
+    "fundadores": "emprendedores locales",
+    "objetivo": "Llevar información y entretenimiento a la comunidad de Huamachuco",
+    "horario": "24 horas al día, 7 días a la semana",
+    "contacto": {
+        "telefono": "91-770-319",
+        "email": "radio@luminares.com",
+        "web": "www.radioluminares.com"
+    }
+}
+
+# Solo mantenemos el patrón de saludos para respuesta rápida
+PATRON_SALUDO = re.compile(r'\b(hola|hl|mano|hi|hey|buenos dias|buenas tardes|buenas noches|saludos)\b')
+RESPUESTA_SALUDO = "¡Hola! Soy Lumi AI, el asistente virtual de Radio Luminares. ¿En qué puedo ayudarte hoy?"
+RESPUESTA_ERROR = "Disculpa, tuve un problema al procesar tu consulta. Por favor, intenta de nuevo."
+
+def asistentechatbot(mensaje_usuario: str) -> str:
+    """
+    Función principal que procesa el mensaje del usuario y devuelve una respuesta.
+    No mantiene estado entre llamadas (sin memoria).
+    """
+    try:
+        # Normalizar el texto (conversión rápida a minúsculas)
+        mensaje_limpio = mensaje_usuario.lower().strip()
+        
+        # Solo verificamos si es un saludo con respuesta rápida
+        if PATRON_SALUDO.search(mensaje_limpio):
+            return RESPUESTA_SALUDO
+        
+        # Para todo lo demás, dejamos que la IA interprete y genere la respuesta
+        return generar_respuesta_ia(mensaje_usuario)
+            
+    except Exception as e:
+        # Manejo de errores simplificado
+        return RESPUESTA_ERROR
+
+def generar_respuesta_ia(consulta: str) -> str:
+    """
+    Utiliza la IA para interpretar y generar una respuesta apropiada,
+    ya sea sobre la radio o sobre cualquier otro tema.
+    """
+    try:
+        # Configuración para Gemini
+        model = genai.GenerativeModel(
+            'gemini-1.5-flash',
+            generation_config={
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "top_k": 40
+            }
+        )
+        # Información sobre la radio para el contexto
+        info_radio = f"""
+        Información sobre Radio Luminares:
+        - Nombre: {RADIO_INFO['nombre']}
+        - Ubicación: {RADIO_INFO['ubicacion']}, {RADIO_INFO['region']}
+        - Año de fundación: {RADIO_INFO['año_fundacion']}
+        - Fundadores: {RADIO_INFO['fundadores']}
+        - Objetivo: {RADIO_INFO['objetivo']}
+        - Horario: {RADIO_INFO['horario']}
+        - Contacto: Teléfono {RADIO_INFO['contacto']['telefono']}, Email {RADIO_INFO['contacto']['email']}, Web {RADIO_INFO['contacto']['web']}
+        """
+        
+        # Prompt completo con contexto de la radio
+        prompt = f"""
+        Como Lumi AI, el asistente virtual de Radio Luminares, responde a la siguiente consulta: 
+        "{consulta}"
+        
+        {info_radio}
+
+        Instrucciones:
+        -Si preguntan sobre qué tipo de música se transmite, responde que se difunden principalmente música cristiana, música cultural .
+        -Si pregunta, quien es villacorta vidal cristhian o cristhian aldair villacorta vidal?, responde es el ingeniero que me dio vida.
+        -Quien creo el aplicativo, responde el aplicativo fue desarrollado por el ingeniero Cristhian Villacorta Vidal el cual esta ubicado en trujillo.
+        -Si el usuario pregunta sobre la radio,Recien usa la informacion de la radio de lo contrario no uses.
+        - No uses la información de la radio en la respuesta.
+        -Si el usuario pregunta por luminares o radio responde con la informacion de la radio.
+        - Si no, responde con conocimiento general.
+        -Si te preguntan quien es el desarrollador, reponde me creo el desarrollador Villacorta Vidal Cristhian
+        """
+        
+        response = model.generate_content(prompt)
+        if response.text:
+            return response.text.strip()
+        else:
+            return "Lo siento, no puedo responder a esa consulta en este momento. ¿Puedo ayudarte con información sobre Radio Luminares?"
+    except Exception as e:
+        return "Disculpa, no pude generar una respuesta. ¿Te interesa conocer algo específico sobre Radio Luminares?"

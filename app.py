@@ -3,6 +3,7 @@ from flask_mail import Mail, Message
 from flask_cors import CORS
 from dotenv import load_dotenv
 import os
+from pydantic import BaseModel
 from flask import send_from_directory
 from cruds import informacion,patrocinador,catalogo
 # Cargar variables de entorno desde el archivo .env
@@ -119,6 +120,15 @@ def get_catalogosurl():
     
     return jsonify({'enlace_url': enlace_url})
 
+# ============================================
+#  CHATBOT
+# ============================================
+
+class Data(BaseModel):
+    mensaje: str
+@app.post("/api/asistente/geminix/")
+def asistentechatbot(data: Data):
+    return informacion.asistentechatbot(data.mensaje)
 
 # Ruta para enviar correos
 @app.route('/send-email', methods=['POST'])

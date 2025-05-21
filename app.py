@@ -124,11 +124,11 @@ def get_catalogosurl():
 #  CHATBOT
 # ============================================
 
-class Data(BaseModel):
-    mensaje: str
-@app.route('/api/asistente/geminix',methods=['POST'])
-def asistentechatbot(data: Data):
-    return informacion.asistentechatbot(data.mensaje)
+@app.route('/api/geminix', methods=['POST'])
+def asistentechatbot():
+    data = request.get_json()
+    mensaje = data.get('message')
+    return informacion.asistentechatbot(mensaje)
 
 # Ruta para enviar correos
 @app.route('/send-email', methods=['POST'])

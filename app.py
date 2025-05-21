@@ -126,7 +126,7 @@ def get_catalogosurl():
 
 class Data(BaseModel):
     mensaje: str
-@app.post("/api/asistente/geminix/")
+@app.route('/api/asistente/geminix',methods=['POST'])
 def asistentechatbot(data: Data):
     return informacion.asistentechatbot(data.mensaje)
 

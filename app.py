@@ -128,7 +128,11 @@ def get_catalogosurl():
 def asistentechatbot():
     data = request.get_json()
     mensaje = data.get('message')
-    return informacion.asistentechatbot(mensaje)
+    print(f"Mensaje recibido: {mensaje}")  # <-- para debug
+    respuesta = informacion.asistentechatbot(mensaje)
+    print(f"Respuesta generada: {respuesta}")  # <-- para debug
+    return jsonify({"respuesta": respuesta})
+
 
 # Ruta para enviar correos
 @app.route('/send-email', methods=['POST'])

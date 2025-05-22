@@ -2,6 +2,8 @@ from models.informacion import OBJCategoria
 from collections import deque
 import google.generativeai as genai
 import re
+from datetime import datetime
+from pytz import timezone
 def obtener_informacion(categoria: str):
     base_url_mundo = "https://backend-zarel.onrender.com/static/img/noticias/mundo/"
     base_url_peru = "https://backend-zarel.onrender.com/static/img/noticias/peru/"
@@ -177,22 +179,22 @@ genai.configure(api_key=API_KEY)
 # Datos de la radio (constantes para acceso rápido)
 RADIO_INFO = {
     "nombre": "Luminares",
-    "año_fundacion": 1990,
+    "año_fundacion": 2000,
     "ubicacion": "Huamachuco, Perú",
     "region": "Sierra de La Libertad",
-    "fundadores": "emprendedores locales",
-    "objetivo": "Llevar información y entretenimiento a la comunidad de Huamachuco",
+    "fundadores": "Emprendedores locales",
+    "objetivo": "Informar y entretener a la población peruana",
     "horario": "24 horas al día, 7 días a la semana",
     "contacto": {
-        "telefono": "91-770-319",
+        "telefono": "975-750-670",
         "email": "radio@luminares.com",
-        "web": "www.radioluminares.com"
+        "web": "https://paglumin.onrender.com/home"
     }
 }
 
 # Solo mantenemos el patrón de saludos para respuesta rápida
 PATRON_SALUDO = re.compile(r'\b(hola|hl|mano|hi|hey|buenos dias|buenas tardes|buenas noches|saludos)\b')
-RESPUESTA_SALUDO = "¡Hola! Soy Lumi AI, el asistente virtual de Radio Luminares. ¿En qué puedo ayudarte hoy?"
+RESPUESTA_SALUDO = "¡Hola! Soy Lumi AI. ¿En qué puedo ayudarte hoy?"
 RESPUESTA_ERROR = "Disculpa, tuve un problema al procesar tu consulta. Por favor, intenta de nuevo."
 
 def asistentechatbot(mensaje_usuario: str) -> str:
@@ -220,6 +222,9 @@ def generar_respuesta_ia(consulta: str) -> str:
     Utiliza la IA para interpretar y generar una respuesta apropiada,
     ya sea sobre la radio o sobre cualquier otro tema.
     """
+    # Configura la zona horaria de Perú (America/Lima)
+    hora_peru = datetime.now(timezone('America/Lima')).strftime("%A %d de %B del %Y, %H:%M %p")
+    
     try:
         # Configuración para Gemini
         model = genai.GenerativeModel(
@@ -250,6 +255,7 @@ def generar_respuesta_ia(consulta: str) -> str:
         {info_radio}
 
         Instrucciones:
+        -Si preguntan a que hora es, responde: {hora_peru}
         -Si preguntan sobre qué tipo de música se transmite, responde que se difunden principalmente música cristiana, música cultural .
         -Si pregunta, quien es villacorta vidal cristhian o cristhian aldair villacorta vidal?, responde es el ingeniero que me dio vida.
         -Quien creo el aplicativo, responde el aplicativo fue desarrollado por el ingeniero Cristhian Villacorta Vidal el cual esta ubicado en trujillo.

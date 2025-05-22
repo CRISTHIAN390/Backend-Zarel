@@ -124,13 +124,13 @@ def get_catalogosurl():
 #  CHATBOT
 # ============================================
 
+class Datax(BaseModel):
+    mensaje: str
 @app.route('/api/geminix', methods=['POST'])
 def asistentechatbot():
     data = request.get_json()
-    mensaje = data.get('message')
-    print(f"Mensaje recibido: {mensaje}")  # <-- para debug
+    mensaje = data.get('mensaje', '')
     respuesta = informacion.asistentechatbot(mensaje)
-    print(f"Respuesta generada: {respuesta}")  # <-- para debug
     return jsonify({"respuesta": respuesta})
 
 

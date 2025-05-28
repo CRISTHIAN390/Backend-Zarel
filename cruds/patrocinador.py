@@ -1,5 +1,6 @@
 from models.patrocinador import OBJPatro
 
+
 def obtener_lista():
     base_url = "https://backend-zarel.onrender.com/static/img/patrocinadores/"
     datos = [
@@ -60,3 +61,4 @@ def obtener_lista():
 
     ]
     return datos
+

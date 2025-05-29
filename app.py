@@ -130,7 +130,8 @@ class Datax(BaseModel):
 def asistentechatbot():
     data = request.get_json()
     mensaje = data.get('message')
-    return informacion.asistentechatbot(mensaje)
+    respuesta = informacion.asistentechatbot(mensaje)
+    return jsonify({"respuesta": respuesta})
 # Ruta para enviar correos
 @app.route('/send-email', methods=['POST'])
 def send_email():

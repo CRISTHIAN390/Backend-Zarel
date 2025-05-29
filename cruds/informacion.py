@@ -1,8 +1,9 @@
 from models.informacion import OBJCategoria
-from collections import deque
+
 import google.generativeai as genai
 import re
 from datetime import datetime
+from pytz import timezone
 def obtener_informacion(categoria: str):
     base_url_mundo = "https://backend-zarel.onrender.com/static/img/noticias/mundo/"
     base_url_peru = "https://backend-zarel.onrender.com/static/img/noticias/peru/"
@@ -254,7 +255,7 @@ def generar_respuesta_ia(consulta: str) -> str:
         {info_radio}
 
         Instrucciones:
-        -Si preguntan a que hora es, responde: {hora_peru}
+        -Si preguntan a que hora es, responde la hora en Perú es: {hora_peru}
         -Si preguntan sobre qué tipo de música se transmite, responde que se difunden principalmente música cristiana, música cultural .
         -Si pregunta, quien es villacorta vidal cristhian o cristhian aldair villacorta vidal?, responde es el ingeniero que me dio vida.
         -Quien creo el aplicativo, responde el aplicativo fue desarrollado por el ingeniero Cristhian Villacorta Vidal el cual esta ubicado en trujillo.

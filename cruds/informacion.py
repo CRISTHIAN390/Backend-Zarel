@@ -194,7 +194,7 @@ RADIO_INFO = {
 
 # Solo mantenemos el patrón de saludos para respuesta rápida
 PATRON_SALUDO = re.compile(r'\b(hola|hl|mano|hi|hey|buenos dias|buenas tardes|buenas noches|saludos)\b')
-RESPUESTA_SALUDO = "¡Hola! Soy Lumi AI. ¿En qué puedo ayudarte hoy?"
+RESPUESTA_SALUDO = "¡Hola! Soy Lumin AI. ¿En qué puedo ayudarte hoy?"
 RESPUESTA_ERROR = "Disculpa, tuve un problema al procesar tu consulta. Por favor, intenta de nuevo."
 
 def asistentechatbot(mensaje_usuario: str) -> str:
@@ -249,7 +249,7 @@ def generar_respuesta_ia(consulta: str) -> str:
         
         # Prompt completo con contexto de la radio
         prompt = f"""
-        Como Lumi AI, el asistente virtual de Radio Luminares, responde a la siguiente consulta: 
+        Como Lumin AI, el asistente virtual de Radio Luminares, responde a la siguiente consulta: 
         "{consulta}"
         
         {info_radio}

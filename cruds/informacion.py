@@ -3,7 +3,6 @@ from collections import deque
 import google.generativeai as genai
 import re
 from datetime import datetime
-from pytz import timezone
 def obtener_informacion(categoria: str):
     base_url_mundo = "https://backend-zarel.onrender.com/static/img/noticias/mundo/"
     base_url_peru = "https://backend-zarel.onrender.com/static/img/noticias/peru/"

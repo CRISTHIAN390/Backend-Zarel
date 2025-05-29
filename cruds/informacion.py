@@ -1,7 +1,7 @@
 from models.informacion import OBJCategoria
-
 import google.generativeai as genai
 import re
+from collections import deque
 
 def obtener_informacion(categoria: str):
     base_url_mundo = "https://backend-zarel.onrender.com/static/img/noticias/mundo/"

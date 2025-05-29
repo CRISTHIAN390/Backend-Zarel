@@ -129,9 +129,11 @@ class Datax(BaseModel):
 @app.route('/api/geminix', methods=['POST'])
 def asistentechatbot():
     data = request.get_json()
-    mensaje = data.get('message')
+    mensaje = data.get('mensaje', '')
     respuesta = informacion.asistentechatbot(mensaje)
     return jsonify({"respuesta": respuesta})
+
+
 # Ruta para enviar correos
 @app.route('/send-email', methods=['POST'])
 def send_email():

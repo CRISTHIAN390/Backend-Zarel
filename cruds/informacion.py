@@ -273,3 +273,5 @@ def generar_respuesta_ia(consulta: str) -> str:
             return "Lo siento, no puedo responder a esa consulta en este momento. ¿Puedo ayudarte con información sobre Radio Luminares?"
     except Exception as e:
         return "Disculpa, no pude generar una respuesta. ¿Te interesa conocer algo específico sobre Radio Luminares?"
+
+

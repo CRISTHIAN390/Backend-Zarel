@@ -123,7 +123,8 @@ def get_catalogosurl():
 # ============================================
 #  CHATBOT
 # ============================================
-
+ 
+ 
 class Datax(BaseModel):
     mensaje: str
 @app.route('/api/geminix', methods=['POST'])
@@ -181,6 +182,7 @@ def send_email():
 @app.errorhandler(404)
 def page_not_found(e):
     return jsonify({"message": "Ruta no encontrada. Verifica la URL."}), 404
+
 
 
 # Iniciar la aplicación

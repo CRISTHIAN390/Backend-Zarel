@@ -18,34 +18,24 @@ app = Flask(__name__)
 def serviri_imagenesmundo(filename):
     return send_from_directory('img/noticias/mundo', filename)
 
-
-
 # Ruta para servir imágenes desde la carpeta img/noticias/peru
 @app.route('/static/img/noticias/peru/<path:filename>')
 def servir_imagenesperu(filename):
     return send_from_directory('img/noticias/peru', filename)
-
-
 
 # Ruta para servir imágenes desde la carpeta img/patrocinadores
 @app.route('/static/img/patrocinadores/<path:filename>')
 def servir_imagenpatro(filename):
     return send_from_directory('img/patrocinadores', filename)
 
-
-
-
 @app.route('/static/img/catalogo/<path:filename>')
 def servir_imagencatalog(filename):
     return send_from_directory('img/catalogo', filename)
-
-
 
 # Servir audios desde la carpeta /audio
 @app.route('/static/audio/<path:filename>')
 def serve_audio(filename):
     return send_from_directory('audio', filename)
-
 
 # Configurar CORS para produccion caso contrario : http://localhost:3000
 #CORS(app, resources={r"/*": {"origins": "https://paginazareli.onrender.com"}})
@@ -79,9 +69,7 @@ def get_stream_url():
     # Aquí puedes cambiar la URL dinámicamente si quieres  #?autoplay=1&mute=0
     #https://www.youtube.com/embed/Y-IlMeCCtIg?autoplay=1&mute=0
     stream_url = 'https://www.youtube.com/embed/7b3GhFqWPsc?autoplay=1&mute=0'
-    
     return jsonify({'stream_url': stream_url})
-
 
 # Tu endpoint POST
 @app.route('/api/informacion', methods=['POST'])
@@ -101,8 +89,6 @@ def obtener_informacion():
     resultado_serializado = [obj.__dict__ for obj in resultado]  
     return jsonify(resultado_serializado)
 
-
-
 @app.route('/api/patrocinadores', methods=['GET'])
 def get_patrocinadores():
     datos = patrocinador.obtener_lista()
@@ -119,14 +105,11 @@ def get_catalogosurl():
     # Aquí puedes cambiar la URL dinámicamente si quieres
     #Noticias: https://www.youtube.com/embed/Y-IlMeCCtIg?autoplay=1&mute=0
     enlace_url = 'https://www.youtube.com/embed/7b3GhFqWPsc?autoplay=1&mute=0'
-    
     return jsonify({'enlace_url': enlace_url})
 
 # ============================================
 #  CHATBOT
 # ============================================
- 
- 
 class Datax(BaseModel):
     mensaje: str
 @app.route('/api/geminix', methods=['POST'])
@@ -184,8 +167,6 @@ def send_email():
 @app.errorhandler(404)
 def page_not_found(e):
     return jsonify({"message": "Ruta no encontrada. Verifica la URL."}), 404
-
-
 
 # Iniciar la aplicación
 if __name__ == '__main__':

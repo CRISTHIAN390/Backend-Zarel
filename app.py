@@ -78,7 +78,7 @@ def enlace():
 def get_stream_url():
     # Aquí puedes cambiar la URL dinámicamente si quieres  #?autoplay=1&mute=0
     #https://www.youtube.com/embed/Y-IlMeCCtIg?autoplay=1&mute=0
-    stream_url = 'https://www.youtube.com/embed/Xef3fR0frOU?autoplay=1&mute=0'
+    stream_url = 'https://www.youtube.com/embed/7b3GhFqWPsc?autoplay=1&mute=0'
     
     return jsonify({'stream_url': stream_url})
 
@@ -117,7 +117,8 @@ def get_catalogos():
 @app.route('/api/catalogo/enlace', methods=['GET'])
 def get_catalogosurl():
     # Aquí puedes cambiar la URL dinámicamente si quieres
-    enlace_url = 'https://www.youtube.com/embed/Y-IlMeCCtIg?autoplay=1&mute=0'
+    #Noticias: https://www.youtube.com/embed/Y-IlMeCCtIg?autoplay=1&mute=0
+    enlace_url = 'https://www.youtube.com/embed/7b3GhFqWPsc?autoplay=1&mute=0'
     
     return jsonify({'enlace_url': enlace_url})
 

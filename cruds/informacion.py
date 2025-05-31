@@ -174,7 +174,7 @@ def obtener_informacion(categoria: str):
 # Configuración de la API de Google Generative AI
 API_KEY = "AIzaSyCmjRN_xL07aRkftfoUba3nHW-_hkrZwnc"
 genai.configure(api_key=API_KEY)
-
+ 
 # Datos de la radio (constantes para acceso rápido)
 RADIO_INFO = {
     "nombre": "Luminares",
@@ -190,7 +190,7 @@ RADIO_INFO = {
         "web": "https://paglumin.onrender.com/home"
     }
 }
-
+ 
 # Solo mantenemos el patrón de saludos para respuesta rápida
 PATRON_SALUDO = re.compile(r'\b(hola|hl|mano|hi|hey|buenos dias|buenas tardes|buenas noches|saludos)\b')
 RESPUESTA_SALUDO = "¡Hola! Soy Lumin AI. ¿En qué puedo ayudarte hoy?"

@@ -129,11 +129,9 @@ def send_email():
         nombre = data.get('nombre')
         correo = data.get('correo')
         descripcion = data.get('descripcion')
-
         # Validar los campos
         if not all([nombre, correo, descripcion]):
             return jsonify({"message": "Todos los campos son obligatorios"}), 400
-
         # Configuración del mensaje de correo
         # Plantilla HTML para el correo
         html_content = f"""

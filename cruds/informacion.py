@@ -246,7 +246,7 @@ def generar_respuesta_ia(consulta: str) -> str:
         
         # Prompt completo con contexto de la radio
         prompt = f"""
-        Como Lumin AI, el asistente virtual de Radio Luminares, responde a la siguiente consulta: 
+        Como Lumin AI, el asistente virtual de Radio Luminares, responde a la siguiente consulta, pero se breve: 
         "{consulta}"
         
         {info_radio}

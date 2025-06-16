@@ -68,8 +68,14 @@ def enlace():
 def get_stream_url():
     # Aquí puedes cambiar la URL dinámicamente si quieres  #?autoplay=1&mute=0
     #https://www.youtube.com/embed/Y-IlMeCCtIg?autoplay=1&mute=0
-    stream_url = 'https://www.youtube.com/embed/7b3GhFqWPsc?autoplay=1&mute=0'
+    #https://www.youtube.com/embed/7b3GhFqWPsc?autoplay=1&mute=0
+    stream_url = 'https://iframe.dacast.com/live/c2386b04-15aa-974b-6912-f8fd63cd782a/94e4c98b-d4d3-8584-2d0c-3338128283ba'
     return jsonify({'stream_url': stream_url})
+
+
+
+
+
 
 # Tu endpoint POST
 @app.route('/api/informacion', methods=['POST'])

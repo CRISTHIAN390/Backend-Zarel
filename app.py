@@ -74,12 +74,6 @@ def get_stream_url():
     return jsonify({'stream_url': stream_url})
 
 
-@app.route('/tv')
-def mostrar_tv():
-    return render_template('twitch.html')
-
-
-
 # Tu endpoint POST
 @app.route('/api/informacion', methods=['POST'])
 def obtener_informacion():

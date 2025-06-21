@@ -177,7 +177,7 @@ genai.configure(api_key=API_KEY)
  
 # Datos de la radio (constantes para acceso rápido)
 RADIO_INFO = {
-    "nombre": "Luminares",
+    "nombre": "Radio Luminares",
     "año_fundacion": 2000,
     "ubicacion": "Huamachuco, Perú",
     "region": "Sierra de La Libertad",
@@ -192,9 +192,10 @@ RADIO_INFO = {
 }
  
 # Solo mantenemos el patrón de saludos para respuesta rápida
-PATRON_SALUDO = re.compile(r'\b(hola|hl|mano|hi|hey|buenos dias|buenas tardes|buenas noches|saludos)\b')
-RESPUESTA_SALUDO = "¡Hola! Soy Lumin AI. ¿En qué puedo ayudarte?"
-RESPUESTA_ERROR = "Disculpa, tuve un problema al procesar tu consulta. Por favor, intenta de nuevo."
+PATRON_SALUDO = re.compile(r'\b(hola|hl|mano|hi|hey|buenos dias|que tal|buenas|buenas tardes|buenas noches|saludos)\b')
+RESPUESTA_SALUDO = "¡Hola! Soy Lumin AI. ¿En qué puedo ayudarte hoy?"
+RESPUESTA_ERROR = "Ups... algo salió mal al procesar tu mensaje 😓. ¿Podrías intentarlo otra vez, por favor?"
+
 
 def asistentechatbot(mensaje_usuario: str) -> str:
     """
@@ -252,21 +253,20 @@ def generar_respuesta_ia(consulta: str) -> str:
         {info_radio}
 
         Instrucciones:
-        -Si preguntan sobre qué tipo de música se transmite, responde que se difunden música cristiana, música cultural 🎶.
-        -Si pregunta, quien es villacorta vidal cristhian o cristhian aldair villacorta vidal?, responde es el ingeniero que me diseñó y programó.
-        -Quien creo el aplicativo o apk o app, responde el aplicativo fue desarrollado por el Ing. Villacorta Vidal 👨🏻‍💻.
-        -No menciones información sobre Radio Luminares  a menos que el usuario lo solicite directamente.
-        -Si el usuario pregunta por luminares o radio o radio luminares responde con la informacion de la radio.
-        -Si no, responde con conocimiento general.
-        -Si te preguntan quien es el desarrollador, reponde brindandole el enlace 👉 https://play.google.com/store/apps/dev?id=7894508111389002888&hl=es.
+        - Si preguntan sobre el tipo de música que se transmite, responde que se difunden música cristiana y música cultural 🎶.
+        - Si preguntan quién es Villacorta Vidal Cristhian o Cristhian Aldair Villacorta Vidal, responde: "Es el ingeniero que me diseñó y programó."
+        - Si preguntan quién creó el aplicativo, la app o el APK, responde: "El aplicativo fue desarrollado por el Ing. Villacorta Vidal 👨🏻‍💻."
+        - No menciones información sobre Radio Luminares a menos que se solicite explícitamente.
+        - Si se menciona luminares, radio o radio luminares, responde con información oficial de la radio.
+        - Si no se menciona nada relacionado con la radio, responde con conocimiento general.
+        - Si preguntan quién es el desarrollador, responde incluyendo este enlace 👉 https://play.google.com/store/apps/dev?id=7894508111389002888&hl=es.
         """
-        
         response = model.generate_content(prompt)
         if response.text:
             return response.text.strip()
         else:
             return "Lo siento, no puedo responder a esa consulta en este momento. ¿Puedo ayudarte con información sobre Radio Luminares?"
     except Exception as e:
-        return "Disculpa, no pude generar una respuesta. ¿Te interesa conocer algo específico sobre Radio Luminares?"
+            return "Disculpa, no pude generar una respuesta. ¿Te interesa conocer algo sobre Radio Luminares?"
 
 

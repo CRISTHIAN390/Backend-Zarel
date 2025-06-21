@@ -183,7 +183,7 @@ RADIO_INFO = {
     "region": "Sierra de La Libertad",
     "fundadores": "Emprendedores locales",
     "objetivo": "Informar y entretener a la población peruana",
-    "horario": "24 horas al día, 7 días a la semana",
+    "horario": "24/7 durante toda la semana",
     "contacto": {
         "telefono": "975-750-670",
         "email": "radio@luminares.com",
@@ -193,7 +193,7 @@ RADIO_INFO = {
  
 # Solo mantenemos el patrón de saludos para respuesta rápida
 PATRON_SALUDO = re.compile(r'\b(hola|hl|mano|hi|hey|buenos dias|buenas tardes|buenas noches|saludos)\b')
-RESPUESTA_SALUDO = "¡Hola! Soy Lumin AI. ¿En qué puedo ayudarte hoy?"
+RESPUESTA_SALUDO = "¡Hola! Soy Lumin AI. ¿En qué puedo ayudarte?"
 RESPUESTA_ERROR = "Disculpa, tuve un problema al procesar tu consulta. Por favor, intenta de nuevo."
 
 def asistentechatbot(mensaje_usuario: str) -> str:
@@ -246,20 +246,19 @@ def generar_respuesta_ia(consulta: str) -> str:
         
         # Prompt completo con contexto de la radio
         prompt = f"""
-        Como Lumin AI, el asistente virtual de Radio Luminares, responde a la siguiente consulta, pero se breve: 
+        Actúa como Lumin AI, el asistente virtual de Radio Luminares, responde a la siguiente consulta con un tono amigable, claro y profesional: 
         "{consulta}"
         
         {info_radio}
 
         Instrucciones:
-        -Si preguntan sobre qué tipo de música se transmite, responde que se difunden principalmente música cristiana, música cultural .
-        -Si pregunta, quien es villacorta vidal cristhian o cristhian aldair villacorta vidal?, responde es el ingeniero que me dio vida.
-        -Quien creo el aplicativo, responde el aplicativo fue desarrollado por el ingeniero Cristhian Villacorta Vidal el cual esta ubicado en trujillo.
-        -Si el usuario pregunta sobre la radio,Recien usa la informacion de la radio de lo contrario no uses.
-        - No uses la información de la radio en la respuesta.
-        -Si el usuario pregunta por luminares o radio responde con la informacion de la radio.
-        - Si no, responde con conocimiento general.
-        -Si te preguntan quien es el desarrollador, reponde me creo el desarrollador Villacorta Vidal Cristhian
+        -Si preguntan sobre qué tipo de música se transmite, responde que se difunden música cristiana, música cultural 🎶.
+        -Si pregunta, quien es villacorta vidal cristhian o cristhian aldair villacorta vidal?, responde es el ingeniero que me diseñó y programó.
+        -Quien creo el aplicativo o apk o app, responde el aplicativo fue desarrollado por el Ing. Villacorta Vidal 👨🏻‍💻.
+        -No menciones información sobre Radio Luminares  a menos que el usuario lo solicite directamente.
+        -Si el usuario pregunta por luminares o radio o radio luminares responde con la informacion de la radio.
+        -Si no, responde con conocimiento general.
+        -Si te preguntan quien es el desarrollador, reponde brindandole el enlace 👉 https://play.google.com/store/apps/dev?id=7894508111389002888&hl=es.
         """
         
         response = model.generate_content(prompt)

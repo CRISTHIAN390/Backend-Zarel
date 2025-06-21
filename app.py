@@ -109,7 +109,7 @@ def get_catalogos():
 def get_catalogosurl():
     # Aquí puedes cambiar la URL dinámicamente si quieres
     #Noticias: https://www.youtube.com/embed/Y-IlMeCCtIg?autoplay=1&mute=0
-    enlace_url = 'https://www.youtube.com/embed/7b3GhFqWPsc?autoplay=1&mute=0'
+    enlace_url = 'https://www.youtube.com/embed/Nkrl3cfaqKg?autoplay=1&mute=0'
     return jsonify({'enlace_url': enlace_url})
 
 # ============================================

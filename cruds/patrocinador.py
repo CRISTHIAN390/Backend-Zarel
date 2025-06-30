@@ -53,10 +53,11 @@ def obtener_lista():
             "nombre": "Vidal Tech Solutions",
             "imagen": base_url + "criss.jpg",
             "descripcion": "Somos una empresa especializada en soluciones tecnológicas y asesoría contable, enfocada en el desarrollo de software, aplicaciones móviles y sistemas de gestión administrativa, entre otros. Combinamos innovación, experiencia y compromiso para brindar herramientas digitales que optimicen procesos y potencien el crecimiento de nuestros clientes.",
-            "url": "https://cvidal.onrender.com/#perfil",
+            "url": "",
             "telefono": "999999999",
             "estado": True
         },
+        #https://cvidal.onrender.com/#perfil
 
     ]
     return datos

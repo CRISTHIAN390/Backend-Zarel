@@ -1,7 +1,7 @@
 from models.catalogo import OBJCatalogo
 
 def obtener_listac():
-    base_url = "https://backend-zarel.onrender.com/static/img/catalogo/"
+    base_url = "https://backend-zarel-production.up.railway.app/static/img/catalogo/"
     datoss = [
         {
             "id": 1,

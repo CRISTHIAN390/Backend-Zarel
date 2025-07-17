@@ -4,8 +4,8 @@ import re
 from collections import deque
 
 def obtener_informacion(categoria: str):
-    base_url_mundo = "https://backend-zarel.onrender.com/static/img/noticias/mundo/"
-    base_url_peru = "https://backend-zarel.onrender.com/static/img/noticias/peru/"
+    base_url_mundo = "https://backend-zarel-production.up.railway.app/static/img/noticias/mundo/"
+    base_url_peru = "https://backend-zarel-production.up.railway.app/static/img/noticias/peru/"
     datos = {
         "Mundo": [
             OBJCategoria(

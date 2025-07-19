@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 from pydantic import BaseModel
 from flask import send_from_directory
-from cruds import informacion,patrocinador,catalogo
+from cruds import informacion,patrocinador,catalogo,informacion2
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
@@ -122,6 +122,16 @@ def asistentechatbot():
     data = request.get_json()
     mensaje = data.get('mensaje', '')
     respuesta = informacion.asistentechatbot(mensaje)
+    return jsonify({"respuesta": respuesta})
+
+
+class Datax(BaseModel):
+    mensaje: str
+@app.route('/api/geminix2', methods=['POST'])
+def asistentechatbot2():
+    data = request.get_json()
+    mensaje = data.get('mensaje', '')
+    respuesta = informacion2.asistentechatbot2(mensaje)
     return jsonify({"respuesta": respuesta})
 
 

@@ -62,12 +62,12 @@ def generar_respuesta_ia(consulta: str) -> str:
         Sigue estas instrucciones al generar tu respuesta:
 
         🔸 **Horarios de alquiler:**
-        - **Día:** de 8:00 a. m. a 6:30 p. m.
-        - **Noche:** de 6:30 p. m. a 11:00 p. m.
+        - **Día:** de 8:00 a. m. a 6:00 p. m.
+        - **Noche:** de 6:00 p. m. a 11:00 p. m.
         - **Día completo:** de 8:00 a. m. a 11:00 p. m.
 
         🔸 **Precios por hora:**
-        - **Día:** S/ 40.00 por hora.
+        - **Día:** S/ 50.00 por hora.
         - **Noche:** S/ 70.00 por hora.
 
         🔸 **Disponibilidad:**
@@ -76,7 +76,7 @@ def generar_respuesta_ia(consulta: str) -> str:
         🔸 **Instrucciones para cotizar:**
         - Si el usuario quiere alquilar por horas, calcula el total multiplicando las horas solicitadas por el precio correspondiente (día o noche).
         - Si el usuario quiere alquilar por *todo el día* o *día completo*, realiza el siguiente cálculo:
-        - Total sin descuento = (número de horas diurnas × S/ 40.00) + (número de horas nocturnas × S/ 70.00)
+        - Total sin descuento = (número de horas diurnas × S/ 50.00) + (número de horas nocturnas × S/ 70.00)
         - También muestra:
             - Total con 5% de descuento
             - Total con 10% de descuento

@@ -11,7 +11,7 @@ genai.configure(api_key=API_KEY)
  
 # Solo mantenemos el patrón de saludos para respuesta rápida
 PATRON_SALUDO = re.compile(r'\b(hola|hl|mano|hi|hey|buenos dias|que tal|buenas|buenas tardes|buenas noches|saludos)\b')
-RESPUESTA_SALUDO = "¡Hola! Soy Pelotero AI. ¿En qué puedo ayudarte hoy?"
+RESPUESTA_SALUDO = "¡Hola! ¿En qué puedo ayudarte hoy?"
 RESPUESTA_ERROR = "Ups... algo salió mal al procesar tu mensaje 😓. ¿Podrías intentarlo otra vez, por favor?"
 
 
@@ -55,8 +55,38 @@ def generar_respuesta_ia(consulta: str) -> str:
         
         # Prompt completo con contexto de la radio
         prompt = f"""
-        Actúa como Pelotero AI, el asistente virtual de canchas deportivas, responde a la siguiente consulta con un tono amigable, claro y profesional: 
+        Actúa como *TripleG AI*, el asistente virtual de canchas deportivas. Responde la siguiente consulta con un tono **amigable, claro y profesional**:
+
         "{consulta}"
+
+        Sigue estas instrucciones al generar tu respuesta:
+
+        🔸 **Horarios de alquiler:**
+        - **Día:** de 8:00 a. m. a 6:30 p. m.
+        - **Noche:** de 6:30 p. m. a 11:00 p. m.
+        - **Día completo:** de 8:00 a. m. a 11:00 p. m.
+
+        🔸 **Precios por hora:**
+        - **Día:** S/ 40.00 por hora.
+        - **Noche:** S/ 70.00 por hora.
+
+        🔸 **Disponibilidad:**
+        - Solo cuentas con **2 canchas deportivas**: *Cancha 1* y *Cancha 2*.
+
+        🔸 **Instrucciones para cotizar:**
+        - Si el usuario quiere alquilar por horas, calcula el total multiplicando las horas solicitadas por el precio correspondiente (día o noche).
+        - Si el usuario quiere alquilar por *todo el día* o *día completo*, realiza el siguiente cálculo:
+        - Total sin descuento = (número de horas diurnas × S/ 40.00) + (número de horas nocturnas × S/ 70.00)
+        - También muestra:
+            - Total con 5% de descuento
+            - Total con 10% de descuento
+
+        🔸 **Ejemplo de formato esperado para una cotización por día completo:**
+        - Total sin descuento: S/ XXX.XX
+        - Total con 5% de descuento: S/ XXX.XX
+        - Total con 10% de descuento: S/ XXX.XX
+
+        Responde siempre con claridad y amabilidad, como si estuvieras ayudando a un cliente en persona.
         """
         response = model.generate_content(prompt)
         if response.text:

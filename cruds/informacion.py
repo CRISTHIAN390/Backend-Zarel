@@ -84,88 +84,97 @@ def obtener_informacion(categoria: str):
         "Peru": [
             OBJCategoria(
                 id=1,
-                titulo="Terror en el Jockey Plaza: Clientes fueron encerrados en tiendas mientras autoridades controlaban la emergencia",
-                url=base_url_peru + "noticia2.png",
-                fecha="2025-05-18",
-                hora="09:15",
+                titulo="Alerta de tsunami en Perú: regiones afectadas y horario actualizado del posible impacto de las olas en el litoral peruano",
+                url=base_url_peru + "noticia1.png",
+                fecha="2025-07-30",
+                hora="08:35",
                 descripcion = """
                 <ul>
-                <li><b>Los clientes se refugiaron en las diversas tiendas para ponerse a buen resguardo</b></li>
-                <li><b>La Policía Nacional del Perú explicó lo sucedido</b></li>
-                <li><b>Disparos en el primer piso del establecimiento</b></li>
+                <li><b>Se cerraron 65 puertos y playas como la Costa Verde y La Punta ante la alerta de tsunami en el litoral peruano</b></li>
+                <li><b>La llegada del tsunami a la costa norte del Perú se estima para las 12:15 p.m., según la Marina de Guerra y el Indeci.</b></li>
+                <li><b>Algunos pescadores en Chiclayo ignoraron las advertencias y salieron a pescar pese a la prohibición.</b></li>
                 </ul>
                 <p>
-                  Minutos de pánico y terror se vivieron en el centro comercial
-                  Jockey Plaza, ubicado en Santiago de Surco, debido 
-                  a una supuesta balacera.
-                  Ciudadanos se refugiaron en las tiendas del lugar para intentar salvaguardar sus vidas ante la emergencia.
+                  Un fuerte sismo de magnitud 8.7 registrado en la península de Kamchatka, Rusia, activó una alerta de tsunami en varias zonas del Pacífico, incluyendo el Perú. Ante esta situación, las autoridades peruanas cerraron 65 puertos y restringieron el acceso a playas como La Punta, la Costa Verde y otras del litoral, además de evacuar a los residentes cercanos al mar. Defensa Civil emitió una alerta masiva a los celulares de la población, recomendando el cierre total de playas hasta que se levante la advertencia. La Dirección de Hidrografía y Navegación informó que las olas podrían llegar a la costa norte del país alrededor de las 12:15 p.m., basándose en datos del arribo a la Isla Galápagos.
                 </p>
                 <div class="detalle-noticia-image-container-123">
-                    <img src="https://backend-zarel.onrender.com/static/img/noticias/peru/noticia1.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
+                    <img src="https://backend-zarel.onrender.com/static/img/noticias/peru/noticia2.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                Según testigos, se escucharon disparos en el primer piso del 
-                establecimiento al promediar las 2 de la tarde de este domingo 
-                18 de mayo.
-                Tras los estruendos de aparentemente un arma de fuego, 
-                los clientes corrieron despavoridos. Las autoridades 
-                desplagaron el protocolo correspondiente para actuar según 
-                lo ocurrido.
+                 En respuesta, instituciones como Indeci, la Presidencia y la Municipalidad de Lima han articulado acciones preventivas, monitoreo constante y comunicación con los distritos costeros. No obstante, algunos ciudadanos han ignorado las medidas de seguridad; por ejemplo, pescadores de Chiclayo salieron al mar en sus caballitos de totora pese a las advertencias, lo que pone en riesgo sus vidas ante la posible llegada del tsunami.
                 </p>
                 """.strip(),
                 estado=True
             ),
             OBJCategoria(
                 id=2,
-                titulo='"Cuchillo" robó 200 toneladas de materal aurífero en Pataz valorizado en US$ 1.2 millones',
-                url=base_url_peru + "noticia4.png",
-                fecha="2025-05-19",
-                hora="11:00",
+                titulo='Dina Boluarte no mencionó en su mensaje que tiene previsto firmar un contrato para comprar 24 aviones de combate',
+                url=base_url_peru + "noticia3.png",
+                fecha="2025-07-30",
+                hora="08:00",
                 descripcion = """
                 <ul>
-                <li><b>Libmar SAC es una de las empresas de Segundo Cueva Rojas en Pataz</b></li>
-                <li><b>Los 13 trabajadores asesinados resguardaban a la empresa Libmar de Segundo Cueva.</b></li>
-                <li><b>Revelan nuevos audios que confirmarían complot de Fernández Jerí contra fiscales del equipo Lava Jato</b></li>
+                <li><b>Dina Boluarte evitó mencionar en su discurso la compra de 24 aviones de combate para modernizar la Fuerza Aérea.</b></li>
+                <li><b>El contrato incluiría aeronaves como el Gripen E, con tecnología avanzada y capacidad supersónica.</b></li>
+                <li><b>La inversión supera los 3 mil millones de dólares y ha generado debate entre seguridad nacional y necesidades sociales</b></li>
                 </ul>
                 <p>
-                  El móvil del secuestro, tortura y asesinato de los 13 trabajadores de seguridad de dos socavones en el distrito de Pataz, La Libertad, fue el robo de 200 toneladas de material aurífero que habían conseguido acumular los mineros que laboraban para la empresa Libmar SAC.
+                 Durante su mensaje por Fiestas Patrias, la presidenta Dina Boluarte evitó mencionar la compra de 24 aviones de combate, una medida destinada a renovar la capacidad de la Fuerza Aérea del Perú. Aunque el discurso escrito incluía este anuncio, fue omitido en su intervención ante el Congreso. Según voceros del gobierno, la adquisición busca reemplazar a los antiguos Mirage 2000, superados tecnológicamente. Uno de los modelos evaluados es el Gripen E, un caza sueco capaz de volar a más de 2.400 km/h y operar en condiciones adversas.
                 </p>
                 <div class="detalle-noticia-image-container-123">
-                    <img src="https://backend-zarel.onrender.com/static/img/noticias/peru/noticia3.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
+                    <img src="https://backend-zarel.onrender.com/static/img/noticias/peru/noticia4.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                 Según declaraciones de testigos ante la Fiscalía Provincial Corporativa contra la Criminalidad Organizada de La Libertad, un grupo de sujetos armados con fusiles de asalto, que supuestamente responden a las órdenes de Miguel Antonio Rodríguez Díaz, alias “Cuchillo”, fueron quienes asaltaron los dos socavones que explota Libmar SAC para la Compañía Minera Poderosa, dueña de los yacimientos.
+                  Esta compra representa una de las mayores inversiones en defensa en décadas, con un presupuesto estimado de más de tres mil millones de dólares. Mientras sectores militares y técnicos la consideran necesaria, otros, como congresistas y organizaciones civiles, cuestionan su prioridad frente a demandas sociales urgentes como salud, educación e infraestructura. Aunque aún no hay contrato firmado, el gobierno da señales claras de avanzar con la modernización del poder aéreo.
                 </p>
                 """.strip(),
                 estado=True
             ),
             OBJCategoria(
                 id=3,
-                titulo='Gobierno establece cadena perpetua para los que usen a menores de edad en actos de sicariato',
-                url=base_url_peru + "noticia6.png",
+                titulo='El Consejo Regional de La Libertad convocará a César Acuña para que responda por millonarias licitaciones otorgadas a una joven empresaria.',
+                url=base_url_peru + "noticia5.png",
                 fecha="2025-05-19",
                 hora="10:00",
                 descripcion = """
                 <ul>
-                <li><b>La ley modifica el Código Penal, Decreto Legislativo 635</b></li>
-                <li><b>POR USAR MENORES EN DELITOS: PENA SERÁ DE HASTA 12 AÑOS</b></li>
-                <li><b>POR USAR MENORES EN SICARIATO O NARCOTRÁFICO: PENA SERÁ DE HASTA 25 AÑOS</b></li>
+                <li><b>El Consejo Regional de La Libertad citará a César Acuña y a sus gerentes por contratos superiores a S/ 300 millones.</b></li>
+                <li><b>La empresa beneficiada está liderada por una joven de 23 años sin experiencia en obras públicas.</b></li>
+                <li><b>Las reuniones previas entre la empresaria y altos funcionarios quedaron registradas oficialmente.</b></li>
                 </ul>
                 <p>
-                  El Poder Ejecutivo promulgó la ley que establece cadena perpetua para las personas que capten a menores de edad valiéndose de su posición, cargo o vínculo familiar, a fin de obligarlos a cometer delitos de sicariato.
+                  El Consejo Regional de La Libertad ha decidido convocar al gobernador César Acuña y a sus principales funcionarios para que den explicaciones sobre licitaciones por más de S/ 300 millones adjudicadas a una empresa dirigida por Lucero Nicole Coca Condori, una joven de 23 años sin experiencia previa en obras públicas. Entre los citados figuran Martín Namay, gerente general, y Jorge Bringas, gerente de Infraestructura. Las obras en cuestión son el Corredor Vial Norte (S/ 121 millones) y el Hospital de Virú (S/ 194 millones).
                 </p>
                 <div class="detalle-noticia-image-container-123">
-                    <img src="https://backend-zarel.onrender.com/static/img/noticias/peru/noticia5.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
+                    <img src="https://backend-zarel.onrender.com/static/img/noticias/peru/noticia6.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                 En ese sentido, se incorpora el artículo 129-Q con penas que van de 8 años de pena privativa de libertad hasta la cadena perpetua.
-                 Dicho artículo señala que quien “mediante violencia, amenaza u otras formas de coacción, abuso de poder o de situación de vulnerabilidad capte e induzca o instigue persuadiendo a un menor de edad para la comisión de delitos será reprimido con pena privativa de libertad no menor de 8 ni mayor de 12 años”.
+                 Según el consejero Robert de la Cruz, la empresaria y sus allegados sostuvieron reuniones previas con autoridades del Gobierno Regional. El padre de Lucero, Juan Carlos Coca, se reunió con Acuña el 8 de marzo de 2024, mientras que ella se entrevistó con los gerentes Bringas y Namay en marzo y mayo, respectivamente. Estas visitas fueron registradas en los cuadernos oficiales, lo que ha generado sospechas sobre la transparencia del proceso de adjudicación.
                 </p>
                 """.strip(),
                 estado=True
             )
         ]
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     categoria_nombre = categoria   # ✅ Solo usar el string directo
 

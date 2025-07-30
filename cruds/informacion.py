@@ -10,72 +10,72 @@ def obtener_informacion(categoria: str):
         "Mundo": [
             OBJCategoria(
                 id=1,
-                titulo="Llamada Putin a Trump deja a la EEUU en el limbo sobre la guerra en Ucrania",
-                url=base_url_mundo + "noticia2.png",
-                fecha="2025-05-19",
-                hora="13:05",
+                titulo="Un fuerte Terremoto de magnitud 8,7 en Rusia activa múltiples alertas de tsunami en el océano Pacífico",
+                url=base_url_mundo + "noticia1.png",
+                fecha="2025-07-30",
+                hora="09:05",
                 descripcion = """
                 <ul>
-                <li><b>Putin y Trump discutieron un posible memorando de paz, pero Rusia sigue imponiendo condiciones difíciles y mantiene su ofensiva militar.</b></li>
-                <li><b>La Unión Europea y Ucrania esperaban un alto el fuego inmediato, pero solo se logró un posible "preludio" sin compromisos concretos.</b></li>
-                <li><b>Rusia continúa con ataques y refuerzos militares, lo que contradice su aparente interés en una solución pacífica.</b></li>
+                <li><b>Un terremoto de magnitud 8,8 sacudió la península de Kamchatka, generando alertas de tsunami en países del Pacífico como Japón, México, Hawái y Alaska.</b></li>
+                <li><b>Autoridades japonesas ordenaron evacuaciones por olas de hasta 3 metros, mientras embarcaciones se alejaban de la costa.</b></li>
+                <li><b>Se reportaron daños estructurales en Rusia, incluyendo una guardería y varias localidades afectadas en Kamchatka y Paramushir.</b></li>
                 </ul>
                 <p>
-                  La llamada entre Putin y Trump ha generado expectativas sobre un posible memorando de entendimiento que sirva como antesala a un acuerdo de paz entre Rusia y Ucrania. Aunque ambos líderes calificaron el diálogo como positivo, las condiciones planteadas por Putin —como que Ucrania ceda territorio y renuncie a entrar en la OTAN— reflejan una propuesta difícil de aceptar para Kiev y sus aliados.
+                  El miércoles 30 de julio, un potente sismo de magnitud 8,8 se registró frente a las costas de la península de Kamchatka, al este de Rusia. El movimiento, que ocurrió a 18 km de profundidad, generó alertas de tsunami en varios países del océano Pacífico, incluyendo Japón, México y territorios como Hawái y Alaska. Aunque en Japón el sismo fue poco perceptible, autoridades activaron protocolos de evacuación en zonas costeras de múltiples prefecturas, anticipando olas de hasta tres metros.
                 </p>
                 <div class="detalle-noticia-image-container-123">
-                    <img src="https://backend-zarel.onrender.com/static/img/noticias/mundo/noticia1.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
+                    <img src="https://backend-zarel.onrender.com/static/img/noticias/mundo/noticia2.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                A pesar del tono diplomático, Rusia mantiene una ofensiva activa en Ucrania y ha intensificado su presencia militar en regiones cercanas a Europa. Esto, sumado al escepticismo de la UE y las declaraciones de antiguos diplomáticos estadounidenses, pone en duda que las negociaciones actuales representen un verdadero avance hacia una paz duradera.
+                Imágenes transmitidas por medios japoneses mostraron a personas evacuadas en Hokkaido refugiándose en techos y bajo carpas, mientras barcos pesqueros se alejaban de los puertos. En Rusia, se reportaron daños materiales, como el colapso parcial de una guardería y afectaciones en edificaciones de Kamchatka y la isla Paramushir. La NOAA estadounidense también emitió alertas para varias zonas costeras, reflejando el alcance regional del evento sísmico.
                 </p>
                 """.strip(),
                 estado=True
             ),
             OBJCategoria(
                 id=2,
-                titulo="EE.UU. y China acuerdan reducir aranceles por 90 días: impacto y riesgos para la economía mundial y el Perú",
-                url=base_url_mundo + "noticia4.png",
-                fecha="2025-05-19",
-                hora="13:40",
+                titulo="Jordania y Emiratos Árabes Unidos realizaron un nuevo envío aéreo con 16 toneladas de ayuda humanitaria para Gaza, con el fin de aliviar la crisis alimentaria",
+                url=base_url_mundo + "noticia3.png",
+                fecha="2025-07-30",
+                hora="11:10",
                 descripcion = """
                 <ul>
-                <li><b>Estados Unidos y China acordaron reducir sus aranceles de manera significativa por 90 días.</b></li>
-                <li><b>Las nuevas tasas bajan al 30% para productos chinos y al 10% para productos estadounidenses.</b></li>
-                <li><b>Ambos países deben aplicar las medidas antes del 14 de mayo, según lo anunció la Casa Blanca.</b></li>
+                <li><b>Jordania y EAU lanzaron 16 toneladas de alimentos y leche en Gaza, sumando ya más de 70 toneladas en total.</b></li>
+                <li><b>Bélgica se suma a la operación con un avión cargado de ayuda por 600 mil euros.</b></li>
+                <li><b>La ONU alerta posible hambruna: ya hay 154 muertes por desnutrición, incluyendo 89 niños.</b></li>
                 </ul>
                 <p>
-                 Estados Unidos y China acordaron una reducción significativa de aranceles tras una reunión en Suiza. El acuerdo, con una duración de 90 días, busca aliviar tensiones comerciales y reactivar el intercambio entre ambas economías.
+                 La ayuda aérea enviada por Jordania, Emiratos Árabes Unidos y próximamente Bélgica intenta mitigar la grave situación humanitaria en Gaza, donde el bloqueo ha dejado a cientos de miles sin acceso regular a alimentos. Aunque estas operaciones suman toneladas de suministros, organizaciones advierten que los lanzamientos no siempre son efectivos, ya que muchos paquetes caen en zonas inaccesibles o en áreas de combate, lo que limita su impacto real.
                 </p>
                 <div class="detalle-noticia-image-container-123">
-                    <img src="https://backend-zarel.onrender.com/static/img/noticias/mundo/noticia3.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
+                    <img src="https://backend-zarel.onrender.com/static/img/noticias/mundo/noticia4.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                    Aunque las reducciones son notables, el pacto es temporal y debe aplicarse antes del 14 de mayo. Su efectividad dependerá de la voluntad política y del impacto que tenga en las relaciones a largo plazo.
+                    Mientras tanto, la crisis alimentaria sigue empeorando. Las cifras son alarmantes: más de medio millón de personas viven bajo condiciones similares a una hambruna y cientos de miles de niños enfrentan desnutrición aguda. La ONU ha advertido que Gaza podría ser oficialmente declarada en hambruna si las condiciones no mejoran pronto, especialmente ante el aumento sostenido de muertes por hambre, enfermedades y falta de atención médica.
                 </p>
                 """.strip(),
                 estado=True
             ),
             OBJCategoria(
                 id=3,
-                titulo='La potencia global que desafiará a EE. UU. y China en 2030: dos países de Latinoamérica podrían convertirse en las próximas “naciones prósperas”',
-                url=base_url_mundo + "noticia6.png",
-                fecha="2025-05-19",
-                hora="14:30",
+                titulo='SpaceX revela una nueva versión mejorada de su nave Starship, diseñada para futuras misiones hacia Marte',
+                url=base_url_mundo + "noticia5.png",
+                fecha="2025-07-30",
+                hora="06:40",
                 descripcion = """
                 <ul>
-                <li><b>Brasil y México serán las dos naciones latinoamericanas en el Top 10 mundial según proyecciones de PwC para los próximos 5 años.</b></li>
-                <li><b>Brasil ocupará el octavo lugar con un PIB estimado de $4.439 billones y México el noveno con $3.661 billones.</b></li>
-                <li><b>India podría superar a Estados Unidos para 2050, mientras Indonesia avanzaría al cuarto lugar, reflejando cambios en la economía global.</b></li>
+                <li><b>SpaceX trasladó su prototipo Starship V2 a Texas para iniciar pruebas clave antes de futuras misiones a Marte.</b></li>
+                <li><b>Elon Musk anunció que la versión V3 podría estar lista para ser lanzada a finales del año.</b></li>
+                <li><b>El desarrollo de Starship busca reducir costos, facilitar misiones lunares y abrir camino a la colonización de Marte.</b></li>
                 </ul>
                 <p>
-                 La estabilidad monetaria es clave para el crecimiento económico y el desarrollo de un país, ya que facilita que este fortalezca sus capacidades año tras año. Según un informe de PwC proyectado hacia 2050, mientras Estados Unidos y China continúan liderando, una nueva potencia mundial podría desafiar su posición. Además, dos países latinoamericanos, Brasil y México, generan expectativas al proyectarse como futuras “naciones ricas” en los próximos cinco años, integrándose al Top 10 de las economías más importantes del mundo.
+                 SpaceX ha comenzado una nueva fase en su programa de desarrollo espacial al trasladar el prototipo Starship V2 a su base de Texas. El vehículo, considerado un paso importante en la misión de llevar humanos a Marte, fue movilizado a la torre de lanzamiento en South Texas, donde la empresa realiza sus pruebas principales. Elon Musk destacó que la próxima versión, V3, podría estar lista para lanzarse antes de fin de año.
                 </p>
                 <div class="detalle-noticia-image-container-123">
-                    <img src="https://backend-zarel.onrender.com/static/img/noticias/mundo/noticia5.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
+                    <img src="https://backend-zarel.onrender.com/static/img/noticias/mundo/noticia6.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                    El informe destaca el Producto Interno Bruto (PIB) como indicador fundamental para estas proyecciones, estimando que Brasil ocupará el octavo lugar con un PIB de $4.439 billones y México el noveno con $3.661 billones. Además, se menciona que economías emergentes como India podrían superar a Estados Unidos para 2050, mientras otros países como Indonesia también escalarán posiciones, reflejando una transformación significativa en el orden económico global.
+                    Starship representa un avance clave en la industria aeroespacial por ser un cohete superpesado y completamente reutilizable. Su éxito podría transformar el acceso al espacio, reduciendo drásticamente los costos y facilitando misiones como el programa lunar Artemis. Además, SpaceX proyecta que sus futuras operaciones desde Florida aumentarán la capacidad de fabricación y frecuencia de lanzamientos.
                 </p>
                 """.strip(),
                 estado=True

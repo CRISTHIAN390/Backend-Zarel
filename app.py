@@ -176,6 +176,21 @@ def send_email():
         # Capturar errores y devolver un mensaje adecuado
         return jsonify({"message": "Error al enviar el correo", "error": str(e)}), 500
 
+
+
+@app.route('/consuldoc', methods=['POST'])
+def sendInfo():
+    try:
+        data = request.get_json()
+        respuesta = informacion.procesarInfo(data)
+        return jsonify(respuesta)
+    except Exception as e:
+        return jsonify({"message": "Error al procesar", "error": str(e)}), 500
+
+
+
+
+
 # Manejo de error 404 para rutas no encontradas
 @app.errorhandler(404)
 def page_not_found(e):

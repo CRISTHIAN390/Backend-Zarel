@@ -3,6 +3,31 @@ import google.generativeai as genai
 import re
 from collections import deque
 
+
+
+def procesarInfo(data):
+    # Puedes ignorar los datos por ahora y solo devolver datos de prueba
+    documentos = [
+        {
+            "fecha": "2024-01-15",
+            "monto": 150.50,
+            "url": "https://example.com/documento1.pdf"
+        },
+        {
+            "fecha": "2024-02-20",
+            "monto": 299.99,
+            "url": "https://example.com/documento2.pdf"
+        }
+    ]
+    return documentos
+
+
+
+
+
+
+
+
 def obtener_informacion(categoria: str):
     base_url_mundo = "https://backend-zarel-production.up.railway.app/static/img/noticias/mundo/"
     base_url_peru = "https://backend-zarel-production.up.railway.app/static/img/noticias/peru/"

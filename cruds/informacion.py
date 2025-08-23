@@ -205,8 +205,8 @@ def obtener_informacion(categoria: str):
 
     return datos.get(categoria_nombre, [])   # ✅ Esto está bien
 
-# Configuración de la API de Google Generative AI
-API_KEY = "AIzaSyCmjRN_xL07aRkftfoUba3nHW-_hkrZwnc"
+# Configuración de la API de Google Generative AI    AIzaSyCmjRN_xL07aRkftfoUba3nHW-_hkrZwnc
+API_KEY = "AIzaSyAQ60ndktxOiAopNpE_CHYxV6QSs2-oyxs"
 genai.configure(api_key=API_KEY)
  
 # Datos de la radio (constantes para acceso rápido)

@@ -3,10 +3,10 @@ import google.generativeai as genai
 import re
 from collections import deque
 
-# Configuración de la API de Google Generative AI
-API_KEY = "AIzaSyCmjRN_xL07aRkftfoUba3nHW-_hkrZwnc"
+# Configuración de la API de Google Generative AI   AIzaSyCmjRN_xL07aRkftfoUba3nHW-_hkrZwnc
+API_KEY = "AIzaSyAQ60ndktxOiAopNpE_CHYxV6QSs2-oyxs"
 genai.configure(api_key=API_KEY)
- 
+  
  
  
 # Solo mantenemos el patrón de saludos para respuesta rápida

@@ -9,7 +9,7 @@ def obtener_lista():
             "imagen": base_url + "ferreteria.jpg",
             "descripcion": "En nuestra distribuidora, ofrecemos una amplia variedad de productos para construcción y remodelación, enfocados en satisfacer tanto a clientes mayoristas como minoristas. Nos esforzamos en brindar materiales de alta calidad y un servicio eficiente para apoyar tus proyectos.",
             "url": "https://grupoemanuelrlg.com//emanuel/proferreteria",
-            "telefono": "999999999",
+            "telefono": "+51 983-272-065",
             "estado": True
         },
         {
@@ -36,7 +36,7 @@ def obtener_lista():
             "imagen": base_url + "tripleg.jpg",
             "descripcion": "En nuestro complejo deportivo, brindamos una experiencia única y accesible para deportistas de todas las edades. Ofrecemos instalaciones modernas y seguras, equipadas con la mejor tecnología y diseñadas para crear un ambiente donde los jóvenes y aficionados puedan disfrutar plenamente de sus actividades deportivas favoritas.",
             "url": "https://grupoemanuelrlg.com/emanuel/complejo",
-            "telefono": "999999999",
+            "telefono": "+51 949-931-907",
             "estado": True
         },
                         {
@@ -45,7 +45,7 @@ def obtener_lista():
             "imagen": base_url + "zareli.jpg",
             "descripcion": "En Servicios Generales G & Z SAC, nos dedicamos a la distribución de una extensa gama de productos para construcción y remodelación. Atendemos tanto a clientes mayoristas como minoristas, ofreciendo materiales de primera calidad y un servicio ágil y comprometido con el éxito de tus proyectos.",
             "url": "https://paginazareli.onrender.com",
-            "telefono": "999999999",
+            "telefono": "+51 928-378-678",
             "estado": True
         },
                                 {

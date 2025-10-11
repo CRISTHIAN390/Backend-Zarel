@@ -32,10 +32,32 @@ def servir_imagenpatro(filename):
 def servir_imagencatalog(filename):
     return send_from_directory('img/catalogo', filename)
 
+
 # Servir audios desde la carpeta /audio
 @app.route('/static/audio/<path:filename>')
 def serve_audio(filename):
     return send_from_directory('audio', filename)
+
+# 🔹 2. Callback: Mercado Pago redirige aquí con ?code=...
+@app.route("/oauth/mercadopago/callback")
+def mercadopago_callback():
+    code = request.args.get("code")  
+    
+    """
+    Recibe el 'code' de Mercado Pago y solicita el access_token.
+    """ 
+
+    
+    if not code:
+        return jsonify({"error": "Código de autorización no recibido"}), 400
+
+    token_url = "https://api.mercadopago.com/oauth/token"
+    return jsonify({
+        "message": "Cuenta conectada exitosamente ✅",
+        "mercado_pago_data": code
+    })
+
+
 
 # Configurar CORS para produccion caso contrario : http://localhost:3000
 #CORS(app, resources={r"/*": {"origins": "https://paginazareli.onrender.com"}})

@@ -4,7 +4,8 @@ import re
 from collections import deque
 
 # Configuración de la API de Google Generative AI   AIzaSyCmjRN_xL07aRkftfoUba3nHW-_hkrZwnc
-API_KEY = "AIzaSyAQ60ndktxOiAopNpE_CHYxV6QSs2-oyxs"
+#AIzaSyAQ60ndktxOiAopNpE_CHYxV6QSs2-oyxs
+API_KEY = "AIzaSyD8QNIDOmlD41nFnArTHlzCKgdrgGsroPQ"
 genai.configure(api_key=API_KEY)
   
  

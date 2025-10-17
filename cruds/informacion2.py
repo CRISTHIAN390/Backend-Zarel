@@ -5,7 +5,7 @@ from collections import deque
 
 # Configuración de la API de Google Generative AI   AIzaSyCmjRN_xL07aRkftfoUba3nHW-_hkrZwnc
 #AIzaSyAQ60ndktxOiAopNpE_CHYxV6QSs2-oyxs
-API_KEY = "AIzaSyD8QNIDOmlD41nFnArTHlzCKgdrgGsroPQ"
+API_KEY = "AIzaSyAPL3laXIwbxFTL2rXIi4-A2p3LE0b6TNA"
 genai.configure(api_key=API_KEY)
   
  
@@ -45,9 +45,9 @@ def generar_respuesta_ia(consulta: str) -> str:
     try:
         # Configuración para Gemini
         model = genai.GenerativeModel(
-            'gemini-1.5-flash',
+            'gemini-2.0-flash',
             generation_config={
-                "temperature": 0.7,
+                "temperature": 0.8,
                 "top_p": 0.95,
                 "top_k": 40
             }

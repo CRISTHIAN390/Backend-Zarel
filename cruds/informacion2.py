@@ -2,10 +2,10 @@ from models.informacion import OBJCategoria
 import google.generativeai as genai
 import re
 from collections import deque
-
+import os
 # Configuración de la API de Google Generative AI   AIzaSyCmjRN_xL07aRkftfoUba3nHW-_hkrZwnc
 #AIzaSyAQ60ndktxOiAopNpE_CHYxV6QSs2-oyxs
-API_KEY = "AIzaSyAPL3laXIwbxFTL2rXIi4-A2p3LE0b6TNA"
+API_KEY = os.getenv("TOKEN_GEMINI")  
 genai.configure(api_key=API_KEY)
   
  

@@ -35,72 +35,72 @@ def obtener_informacion(categoria: str):
         "Mundo": [
             OBJCategoria(
                 id=1,
-                titulo="Israel derribó otro edificio en la ciudad de Gaza que estaba siendo utilizado por militantes de Hamas",
+                titulo="EE.UU. impone sanciones al presidente colombiano Gustavo Petro por presunto vínculo con el narcotráfico",
                 url=base_url_mundo + "noticia1.png",
-                fecha="2025-09-13",
-                hora="08:05",
+                fecha="2026-10-23",
+                hora="12:35",
                 descripcion = """
                 <ul>
-                <li><b>El Ejército israelí derribó la torre Nour en Ciudad de Gaza, un edificio de 12 plantas que según las FDI era utilizado por Hamas para planear y ejecutar ataques.</b></li>
-                <li><b>Los bombardeos y demoliciones han dejado sin hogar a decenas de miles de palestinos, con más de 53.000 personas que han perdido sus viviendas en menos de una semana.</b></li>
-                <li><b>Más de 250.000 habitantes han abandonado Ciudad de Gaza tras la intensificación de los ataques, en un desplazamiento masivo hacia el sur de la Franja.</b></li>
+                <li><b>El gobierno de Donald Trump incluyó a Gustavo Petro, su familia y su ministro del Interior en la lista OFAC del Departamento del Tesoro.</b></li>
+                <li><b>Washington acusa a Petro de facilitar el aumento histórico en la producción de cocaína y de mantener nexos con el régimen de Nicolás Maduro.</b></li>
+                <li><b>Petro rechazó las sanciones calificándolas de injustas y paradójicas, asegurando que su gobierno ha decomisado cantidades récord de droga.</b></li>
                 </ul>
                 <p>
-                  El Ejército israelí derribó un rascacielos de 12 plantas en Gaza, identificado como la torre Nour, tras emitir una orden de evacuación. Según las FDI, el inmueble era utilizado por Hamas como centro operativo para planear ataques. Este hecho se suma a una serie de bombardeos que han destruido varios edificios en la capital gazatí, incrementando la devastación en la zona.
+                  El gobierno de Estados Unidos, encabezado por Donald Trump, sancionó al presidente colombiano Gustavo Petro, a miembros de su familia y a su ministro del Interior al incluirlos en la lista OFAC, que bloquea activos y restringe transacciones con ciudadanos estadounidenses. Washington sostiene que, bajo el mandato de Petro, la producción de cocaína alcanzó niveles sin precedentes, lo que representa una amenaza para la seguridad y la economía de EE.UU. Además, el Departamento del Tesoro lo acusa de haberse aliado con el régimen de Nicolás Maduro en Venezuela y de participar en actividades relacionadas con el narcotráfico internacional.
                 </p>
                 <div class="detalle-noticia-image-container-123">
                     <img src="https://backend-zarel.onrender.com/static/img/noticias/mundo/noticia2.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                La ofensiva ha provocado graves consecuencias humanitarias: más de 53.000 palestinos han perdido sus hogares en pocos días y al menos 250.000 personas se han desplazado hacia el sur del enclave en busca de seguridad. Además de las torres residenciales, cientos de tiendas de campaña y viviendas fueron destruidas, dejando a miles de familias sin refugio en medio de la crisis.
+                Petro respondió calificando la medida como una paradoja, argumentando que su administración ha sido una de las más activas en la lucha contra el narcotráfico, con cifras récord de decomisos. Las sanciones llegan poco después de tensiones diplomáticas entre ambos países, tras las críticas del mandatario colombiano hacia acciones estadounidenses en el Caribe. Con esta decisión, cualquier bien o cuenta vinculada a Petro en territorio estadounidense queda bloqueada, y se prohíbe a ciudadanos y empresas de EE.UU. realizar operaciones con los sancionados.
                 </p>
                 """.strip(),
                 estado=True
             ),
             OBJCategoria(
                 id=2,
-                titulo="Rusia efectuó un nuevo ataque de gran escala contra Ucrania, en el que lanzó un misil y 164 drones durante la noche.",
+                titulo="Trump refuerza su poder militar y la presencia de la CIA en el Caribe: crecen las tensiones con Venezuela y Maduro",
                 url=base_url_mundo + "noticia3.png",
-                fecha="2025-09-13",
-                hora="8:15",
+                fecha="2025-10-24",
+                hora="15:40",
                 descripcion = """
                 <ul>
-                <li><b>Rusia lanzó un ataque nocturno contra Ucrania con un misil balístico y 164 drones, de los cuales 137 fueron neutralizados por la defensa ucraniana.</b></li>
-                <li><b>En paralelo, Rusia y Bielorrusia iniciaron maniobras militares estratégicas cerca de la frontera polaca, lo que generó preocupación en la OTAN.</b></li>
-                <li><b>El secretario general de la OTAN, Mark Rutte, denunció múltiples violaciones del espacio aéreo aliado por drones rusos y anunció una nueva iniciativa de defensa llamada Centinela oriental.</b></li>
+                <li><b>Estados Unidos realiza el mayor despliegue militar en el Caribe en décadas, con buques de guerra, bombarderos y operaciones de inteligencia de la CIA cerca de Venezuela.</b></li>
+                <li><b>Washington presenta la operación como parte de su lucha antidrogas, pero analistas y líderes regionales creen que busca presionar o derrocar al presidente Nicolás Maduro.</b></li>
+                <li><b>EE.UU. ofrece hasta 50 millones de dólares por información que lleve a la captura de Maduro, mientras mantiene sanciones y un bloqueo diplomático desde 2019.</b></li>
                 </ul>
                 <p>
-                 Durante la noche, Rusia ejecutó un ataque masivo contra Ucrania empleando un misil balístico Iskander-M y más de 160 drones de distintos modelos. La Fuerza Aérea ucraniana informó que logró derribar o neutralizar 137 de estos aparatos, aunque se registraron impactos en nueve zonas y fragmentos en otras tres. Las acciones defensivas incluyeron el uso de aviación, sistemas antiaéreos y unidades de guerra electrónica para repeler la ofensiva.
+                 El gobierno de Donald Trump ha intensificado su postura frente a Venezuela con un amplio despliegue militar en el Caribe, el más grande en décadas. La presencia de destructores, bombarderos B-52, marines y aviones de vigilancia se enmarca oficialmente en una estrategia contra el narcotráfico, aunque muchos expertos y gobiernos de la región ven en ello una maniobra de presión para forzar un cambio de régimen. Además del componente militar, Trump autorizó operaciones de la CIA en territorio venezolano, aumentando la tensión con el gobierno de Nicolás Maduro. La Casa Blanca sostiene que las acciones buscan frenar el tráfico de drogas y restaurar la democracia, mientras crece el debate sobre su legalidad y verdadero propósito.
                 </p>
                 <div class="detalle-noticia-image-container-123">
                     <img src="https://backend-zarel.onrender.com/static/img/noticias/mundo/noticia4.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                    Al mismo tiempo, Rusia y Bielorrusia pusieron en marcha la fase activa de los ejercicios militares Západ-2025 cerca de Minsk, a menos de 500 kilómetros de Polonia. Estas maniobras, junto con recientes incursiones aéreas rusas en territorio aliado, llevaron a la OTAN a reforzar su flanco oriental. El secretario general, Mark Rutte, calificó las violaciones del espacio aéreo como peligrosas y reiteró que Rusia cruzó los límites de seguridad de la Alianza, anunciando la creación de la iniciativa Centinela oriental para fortalecer la defensa regional.
+                    En paralelo, Washington ha elevado a 50 millones de dólares la recompensa por la captura de Maduro y mantiene severas sanciones económicas contra Caracas. Sin embargo, pese a la presión internacional, el mandatario venezolano sigue contando con el respaldo de su cúpula militar y aliados políticos, quienes temen represalias judiciales si se rebelan. Los analistas coinciden en que el ejército será clave para cualquier eventual transición, pero dudan de que las medidas estadounidenses consigan quebrar su lealtad. En un contexto de crisis económica y aislamiento diplomático, el conflicto entre ambos gobiernos parece entrar en una nueva etapa de confrontación política y militar.
                 </p>
                 """.strip(),
                 estado=True
             ),
             OBJCategoria(
                 id=3,
-                titulo='Fitch señaló que la deuda soberana de Francia se vio afectada por la incertidumbre fiscal del gobierno de Macron',
+                titulo='Atlas: el nuevo navegador de OpenAI que desafía el dominio de Google en las búsquedas web',
                 url=base_url_mundo + "noticia5.png",
-                fecha="2025-09-13",
-                hora="9:30",
+                fecha="2025-10-24",
+                hora="16:14",
                 descripcion = """
                 <ul>
-                <li><b>Fitch bajó la calificación de la deuda francesa de “AA-” a “A+” por la incertidumbre política y fiscal.</b></li>
-                <li><b>La caída de Bayrou y el nombramiento de Lecornu complican la aprobación del presupuesto 2026.</b></li>
-                <li><b>Protestas sociales y mayor endeudamiento acercan a Francia a niveles similares a Italia.</b></li>
+                <li><b>OpenAI lanzó ChatGPT Atlas, un navegador impulsado por inteligencia artificial que elimina la barra de direcciones y se centra en búsquedas conversacionales.</b></li>
+                <li><b>El navegador busca posicionarse frente a gigantes como Google Chrome y Microsoft Edge, ofreciendo incluso un modo de agente automático para realizar búsquedas por cuenta del usuario.</b></li>
+                <li><b>El lanzamiento llega mientras Google enfrenta juicios antimonopolio y crece el uso de modelos de lenguaje como ChatGPT para realizar consultas en internet</b></li>
                 </ul>
                 <p>
-                 La agencia Fitch redujo la calificación de la deuda francesa a “A+”, señalando la inestabilidad política y la falta de claridad fiscal como los principales obstáculos para una consolidación presupuestaria. Este ajuste refleja un mayor riesgo de vulnerabilidad frente a cambios económicos adversos y se produce en un contexto en el que el gobierno de Emmanuel Macron enfrenta divisiones parlamentarias y la necesidad de aprobar el presupuesto de 2026.
+                    OpenAI ha presentado Atlas, un navegador web creado alrededor de ChatGPT que promete transformar la manera en que las personas buscan información en línea. A diferencia de los navegadores tradicionales, Atlas elimina la barra de direcciones e integra directamente la inteligencia artificial para ofrecer respuestas personalizadas en lugar de simples enlaces. Sam Altman, CEO de OpenAI, explicó que este navegador representa un nuevo paso para monetizar la expansión de su ecosistema de IA, que ya cuenta con más de 800 millones de usuarios semanales. Además, Atlas incorporará un modo de agente pago que podrá realizar búsquedas y tareas por cuenta propia, brindando una experiencia más automatizada y eficiente.
                 </p>
                 <div class="detalle-noticia-image-container-123">
                     <img src="https://backend-zarel.onrender.com/static/img/noticias/mundo/noticia6.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
-               <p>
-                   El nuevo primer ministro, Sébastien Lecornu, asumió la tarea de estabilizar la situación política tras la salida de Bayrou, pero debe lidiar con la presión social y la oposición parlamentaria. Mientras se evalúa la posibilidad de incluir impuestos a las grandes fortunas, casi 200.000 manifestantes salieron a las calles exigiendo mejoras salariales y mayor equidad fiscal. En este escenario, el futuro de las finanzas francesas será revisado nuevamente por S&P Global en noviembre, aumentando la incertidumbre económica.
+                <p>
+                   Pese al entusiasmo, algunos analistas se muestran cautelosos ante la posibilidad de que Atlas desplace a gigantes como Chrome o Edge, dado que muchos usuarios prefieren mantenerse en entornos familiares. Sin embargo, el lanzamiento coincide con el creciente cuestionamiento al dominio de Google en el mercado de las búsquedas, tras su reciente fallo por monopolio ilegal. En este contexto, la propuesta de OpenAI apunta a capitalizar el auge de los modelos de lenguaje y a redefinir cómo los internautas acceden a la información en una nueva era de búsquedas impulsadas por IA.
                 </p>
                 """.strip(),
                 estado=True
@@ -109,72 +109,72 @@ def obtener_informacion(categoria: str):
         "Peru": [
             OBJCategoria(
                 id=1,
-                titulo="Marcha por el retiro de AFP EN VIVO: manifestantes demandan una nueva liberación de fondos y se oponen a la reforma de pensiones",
+                titulo="Agua Marina se retira temporalmente tras atentado en Chorrillos y pide unión y calma al país",
                 url=base_url_peru + "noticia1.png",
-                fecha="2025-09-13",
-                hora="09:35",
+                fecha="2025-10-24",
+                hora="16:35",
                 descripcion = """
                 <ul>
-                <li><b>Ciudadanos marchan desde la Plaza San Martín para rechazar la reforma del sistema de pensiones y exigir nuevo retiro de fondos AFP.</b></li>
-                <li><b>La ley fija pensión mínima de 600 soles con 20 años de aporte, obliga a independientes a cotizar desde 2028 y eleva la jubilación anticipada a 55 años.</b></li>
-                <li><b>Jóvenes desde 18 años serán afiliados automáticamente, y los menores de 40 no podrán retirar el 95.5% de su fondo al jubilarse.</b></li>
+                <li><b>La agrupación de cumbia anunció una pausa indefinida para recuperarse física y emocionalmente del atentado ocurrido durante su concierto en Chorrillos.</b></li>
+                <li><b>Los hermanos Quiroga afirmaron que volverán a los escenarios “cuando sea el momento”, priorizando la salud y la paz de sus integrantes.</b></li>
+                <li><b>En su comunicado, el grupo también expresó su apoyo a quienes protestan por la inseguridad y llamó a la unidad y empatía entre los peruanos.</b></li>
                 </ul>
                 <p>
-                  Este sábado 13 de septiembre, ciudadanos se movilizaron en Lima y otras ciudades para expresar su rechazo a la reforma previsional. La protesta, convocada de manera independiente en redes sociales, busca exigir un nuevo retiro de fondos de las AFP y denunciar los cambios que consideran perjudiciales para los afiliados. Además, la marcha también levantó la voz contra la creciente delincuencia y la ola de extorsiones en el país.
+                  El reconocido grupo de cumbia Agua Marina sorprendió a sus seguidores al anunciar su retiro temporal de los escenarios tras el atentado ocurrido durante su presentación en el Círculo Militar de Chorrillos. En el ataque, cuatro músicos resultaron heridos, aunque todos lograron sobrevivir. A través de un comunicado difundido en sus redes sociales, los hermanos Quiroga explicaron que necesitan un tiempo para recuperarse “física y mentalmente” de lo sucedido, asegurando que su regreso ocurrirá “cuando sea el momento y de la mano de Dios”. El anuncio generó muestras masivas de apoyo y solidaridad por parte del público.
                 </p>
                 <div class="detalle-noticia-image-container-123">
                     <img src="https://backend-zarel.onrender.com/static/img/noticias/peru/noticia2.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                 La reforma establece que todos los retiros de AFP quedan prohibidos y fija una pensión mínima de 600 soles, condicionada a 20 años de aportes. También obliga a los trabajadores independientes a cotizar desde 2028 con un descuento entre 2% y 5%, eleva la edad para la jubilación anticipada a 55 años, y limita el acceso al 95.5% del fondo a quienes tengan menos de 40 años. Asimismo, dispone que toda persona mayor de 18 años sea afiliada obligatoriamente a una AFP.
+                 En el mismo mensaje, la agrupación también aprovechó para pronunciarse sobre la situación social del país, rechazando los ataques hacia los ciudadanos que participaron en la marcha nacional contra la inseguridad. Agua Marina enfatizó su compromiso con la paz, la empatía y la unión entre los peruanos, señalando que la música debe servir como un puente que conecte y no como un motivo de división. Con este mensaje, el grupo reafirmó su papel no solo como referente musical, sino también como voz de esperanza y reflexión en momentos difíciles para el país.
                 </p>
                 """.strip(),
                 estado=True
             ),
             OBJCategoria(
                 id=2,
-                titulo='Ibai Llanos transmitirá en pantalla grande el anuncio del ganador del Mundial de desayunos',
+                titulo='Desconfianza histórica: más del 80% de peruanos no cree en la Policía Nacional, según el INEI',
                 url=base_url_peru + "noticia3.png",
-                fecha="2025-09-13",
-                hora="09:51",
+                fecha="2025-10-24",
+                hora="16:51",
                 descripcion = """
                 <ul>
-                <li><b>La Municipalidad de Miraflores organiza un evento comunitario para alentar votos por el pan con chicharrón en el Mundial de desayunos de Ibai Llanos.</b></li>
-                <li><b>El encuentro se realizará en el pasaje Porta con pantalla gigante, participación de foodies e influencers, y la oferta de chicharronerías locales.</b></li>
-                <li><b>El pan con chicharrón, desayuno típico peruano, compite contra otros países en una dinámica global creada por el streamer español.</b></li>
+                <li><b>La confianza en la Policía Nacional del Perú cayó al 14.2%, su nivel más bajo en una década, reveló el INEI.</b></li>
+                <li><b>Casi 1.000 agentes han sido detenidos en lo que va del año por delitos que incluyen violencia, corrupción y homicidio.</b></li>
+                <li><b>Expertos señalan que la PNP necesita resultados concretos contra la delincuencia y reformas internas para recuperar la credibilidad ciudadana.</b></li>
                 </ul>
                 <p>
-                 Este sábado 13 de septiembre, Miraflores será escenario de un evento especial organizado por la municipalidad, donde vecinos y visitantes podrán reunirse para apoyar al pan con chicharrón en la semifinal del Mundial de desayunos impulsado por Ibai Llanos. La jornada contará con foodies, influencers, pantallas gigantes y códigos QR para facilitar la votación en línea, además de degustaciones ofrecidas por diversas chicharronerías del distrito.
+                 La desconfianza hacia la Policía Nacional del Perú (PNP) alcanzó un punto crítico: solo el 14.2% de los ciudadanos afirma confiar en la institución, según un reciente estudio del INEI. Este nivel representa la cifra más baja de los últimos diez años y refleja un deterioro constante de la imagen policial. Los cuestionamientos aumentaron tras el asesinato del joven rapero Eduardo Ruiz “Trvko”, los casos de represión en protestas y los reiterados escándalos internos. De enero a agosto de 2025, cerca de 1.000 efectivos fueron detenidos por delitos como violencia de género, corrupción y crímenes contra la vida, lo que profundiza la crisis institucional.
                 </p>
                 <div class="detalle-noticia-image-container-123">
                     <img src="https://backend-zarel.onrender.com/static/img/noticias/peru/noticia4.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                  La competencia, transmitida por el popular streamer español en sus plataformas digitales, busca elegir el mejor desayuno del mundo. Perú participa con su tradicional pan con chicharrón, preparado con pan francés, cerdo frito, camote dorado y salsa criolla, un plato que forma parte de la identidad gastronómica del país y que suele disfrutarse en familia los domingos o en celebraciones especiales.
+                  El exdirector de la PNP, Eduardo Pérez Rocha, considera que los constantes casos de corrupción y la falta de protección efectiva al ciudadano son factores que erosionan la confianza pública. Según explicó, muchas víctimas de extorsión desconfían en denunciar porque los delincuentes obtienen información desde las propias comisarías. Para los analistas, la única forma de revertir la percepción negativa es con resultados visibles en la lucha contra la delincuencia, una depuración interna rigurosa y un cambio estructural que devuelva el prestigio a una institución clave para la seguridad del país.
                 </p>
                 """.strip(),
                 estado=True
             ),
             OBJCategoria(
                 id=3,
-                titulo='El BCR recortó la tasa de interés de referencia a 4,25%; analizan las razones, el impacto en el país y la posibilidad de un nuevo ajuste.',
+                titulo='Senamhi emite alerta naranja: Lima y 16 regiones afrontarán temperaturas de hasta 33 °C y alta radiación UV',
                 url=base_url_peru + "noticia5.png",
-                fecha="2025-09-13",
-                hora="10:00",
+                fecha="2025-10-24",
+                hora="16:42",
                 descripcion = """
                 <ul>
-                <li><b>El BCR redujo la tasa de interés de referencia en 25 puntos básicos, situándola en 4,25%, su nivel más bajo en tres años.</b></li>
-                <li><b>Según Adrián Armas, la decisión responde a una inflación controlada (2,2%) y a un crecimiento económico cercano al 3%.</b></li>
-                <li><b>El ajuste ya era anticipado por el mercado y se espera un impacto marginal, con proyecciones de expansión del crédito de 5% este año.</b></li>
+                <li><b>El Senamhi declaró alerta naranja por el incremento de temperaturas “de moderada a fuerte intensidad” en Lima y otras 16 regiones del país.</b></li>
+                <li><b>Las máximas oscilarán entre 25 °C y 33 °C, acompañadas de radiación ultravioleta elevada y ráfagas de viento de hasta 45 km/h.</b></li>
+                <li><b>La alerta estará vigente hasta el 25 de octubre, con especial atención en las zonas de sierra y costa sur.</b></li>
                 </ul>
                 <p>
-                  El Banco Central de Reserva (BCR) decidió recortar la tasa de interés de referencia a 4,25%, lo que la ubica cerca de un nivel considerado neutral para la economía. Este es el nivel más bajo desde 2022, y la medida se tomó en un contexto de inflación controlada y de expectativas de crecimiento anual de alrededor del 3%. Adrián Armas, gerente central de Estudios Económicos, señaló que el mercado ya anticipaba este ajuste y que la medida fue vista como necesaria para mantener la estabilidad macroeconómica.
+                  El Servicio Nacional de Meteorología e Hidrología (Senamhi) emitió una alerta naranja por el incremento de temperaturas que afectará a Lima y 16 regiones del país, con valores que podrían llegar hasta los 33 °C. Según el organismo, este fenómeno estará acompañado por un aumento significativo en la radiación ultravioleta y una reducción de la nubosidad hacia el mediodía, lo que intensificará la exposición solar. Además, se prevén ráfagas de viento cercanas a los 45 km/h durante las tardes, especialmente en las zonas costeras y altoandinas.
                 </p>
                 <div class="detalle-noticia-image-container-123">
                     <img src="https://backend-zarel.onrender.com/static/img/noticias/peru/noticia6.png" alt="Imagen relacionada" class="detalle-noticia-image-content-123" />
                 </div> 
                <p>
-                 Pese al contexto electoral, el BCR considera que la economía peruana mantiene dinamismo y que las inversiones actuales contribuirán a fortalecer la capacidad productiva en los próximos años. El impacto inmediato de la reducción se estima marginal, ya que buena parte de los agentes financieros había previsto el cambio; sin embargo, se mantiene una proyección de expansión del crédito del 5% para 2025, respaldada por una reciente aceleración en los préstamos.
+                 La medida, vigente hasta la medianoche del 25 de octubre, incluye regiones como Áncash, Arequipa, Cusco, Piura y Tacna. El Senamhi recomendó a la población tomar precauciones frente a la radiación UV, mantenerse hidratada y evitar la exposición prolongada al sol en horas pico. Las proyecciones climáticas apuntan a un fin de semana de primavera inusualmente cálida, con temperaturas por encima del promedio habitual, reflejando los efectos de la variabilidad climática que atraviesa gran parte del país.
                 </p>
                 """.strip(),
                 estado=True

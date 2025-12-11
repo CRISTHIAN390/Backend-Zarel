@@ -179,11 +179,11 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
          #  "main:app",
-        host="127.0.0.1",
-        port=4500,
+        host="0.0.0.0",
+        port=8080,
         reload=True
     )
 
-#uvicorn main:app --reload --host 127.0.0.1 --port 4500
+#uvicorn main:app --reload --port 8080 --host 127.0.0.1
 
 #gunicorn main:app \-w 4 \ -k uvicorn.workers.UvicornWorker \ --bind 0.0.0.0:4500

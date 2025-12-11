@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\xampp\htdocs\PaginaZareli\flask_mail_project\venv"
+VIRTUAL_ENV="D:\Archivos_de_Git_2024\ApkMarvin\Backend-Zarel\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -1,14 +1,14 @@
 from models.informacion import OBJCategoria
-import google.generativeai as genai
+from google import genai
 import re
+from google.genai import types
 from collections import deque
 import os
 # Configuración de la API de Google Generative AI   AIzaSyCmjRN_xL07aRkftfoUba3nHW-_hkrZwnc
 #AIzaSyAQ60ndktxOiAopNpE_CHYxV6QSs2-oyxs
-API_KEY = os.getenv("TOKEN_GEMINI")  
-genai.configure(api_key=API_KEY)
-  
- 
+
+
+
  
 # Solo mantenemos el patrón de saludos para respuesta rápida
 PATRON_SALUDO = re.compile(r'\b(hola|hl|mano|hi|hey|buenos dias|que tal|buenas|buenas tardes|buenas noches|saludos)\b')
@@ -43,17 +43,10 @@ def generar_respuesta_ia(consulta: str) -> str:
     """
 
     try:
-        # Configuración para Gemini
-        model = genai.GenerativeModel(
-            'gemini-2.0-flash',
-            generation_config={
-                "temperature": 0.8,
-                "top_p": 0.95,
-                "top_k": 40
-            }
-        )
+        # Crear el cliente del nuevo SDK
+        client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
-        
+
         # Prompt completo con contexto de la radio
         prompt = f"""
         Actúa como *TripleG AI*, el asistente virtual de canchas deportivas. Responde la siguiente consulta con un tono **amigable, claro y profesional**:
@@ -89,12 +82,25 @@ def generar_respuesta_ia(consulta: str) -> str:
 
         Responde siempre con claridad y amabilidad, como si estuvieras ayudando a un cliente en persona.
         """
-        response = model.generate_content(prompt)
-        if response.text:
-            return response.text.strip()
+
+        # Llamada correcta al nuevo modelo
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.7,
+                top_p=0.95,
+                top_k=40
+            )
+        )
+
+        texto = response.text  # ✔ forma correcta de leer el texto
+
+        if texto:
+            return texto.strip()
         else:
-            return "Lo siento, no puedo responder a esa consulta en este momento"
+            return "Lo siento, no puedo responder a esa consulta en este momento."
     except Exception as e:
-            return "Disculpa, no pude generar una respuesta"
+        return "Disculpa, no pude generar una respuesta."
 
 

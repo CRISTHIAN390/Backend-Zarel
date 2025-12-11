@@ -1,7 +1,9 @@
 from models.informacion import OBJCategoria
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import re
 from collections import deque
+import os
 
 
 
@@ -205,10 +207,8 @@ def obtener_informacion(categoria: str):
 
     return datos.get(categoria_nombre, [])   # ✅ Esto está bien
 
-# Configuración de la API de Google Generative AI    AIzaSyCmjRN_xL07aRkftfoUba3nHW-_hkrZwnc
-API_KEY = "AIzaSyAQ60ndktxOiAopNpE_CHYxV6QSs2-oyxs"
-genai.configure(api_key=API_KEY)
- 
+
+
 # Datos de la radio (constantes para acceso rápido)
 RADIO_INFO = {
     "nombre": "Radio Luminares",
@@ -259,15 +259,11 @@ def generar_respuesta_ia(consulta: str) -> str:
     """
 
     try:
-        # Configuración para Gemini
-        model = genai.GenerativeModel(
-            'gemini-1.5-flash',
-            generation_config={
-                "temperature": 0.7,
-                "top_p": 0.95,
-                "top_k": 40
-            }
-        )
+
+        # Crear el cliente del nuevo SDK
+        client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+
+
         # Información sobre la radio para el contexto
         info_radio = f"""
         Información sobre Radio Luminares:
@@ -296,9 +292,22 @@ def generar_respuesta_ia(consulta: str) -> str:
         - Si no se menciona nada relacionado con la radio, responde con conocimiento general.
         - Si preguntan quién es el desarrollador, responde incluyendo este enlace 👉 https://play.google.com/store/apps/dev?id=7894508111389002888&hl=es.
         """
-        response = model.generate_content(prompt)
-        if response.text:
-            return response.text.strip()
+
+        # Llamada correcta al nuevo modelo
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+            config=types.GenerateContentConfig(
+            temperature=0.7,
+            top_p=0.95,
+            top_k=40
+            )
+        )
+
+        texto = response.text  # ✔ forma correcta de leer el texto
+
+        if texto:
+            return texto.strip()
         else:
             return "Lo siento, no puedo responder a esa consulta en este momento. ¿Puedo ayudarte con información sobre Radio Luminares?"
     except Exception as e:

@@ -104,18 +104,24 @@ def television():
 
 
 # Tu endpoint POST
+class CategoriaRequest(BaseModel):
+    categoria: str
 @app.post("/api/informacion")
-def obtener_informacion(categoria: str):
-  
-    print("JSON recibido:", categoria.dict())
-
-    # Llamar a tu CRUD igual que antes
+def obtener_informacion(data: CategoriaRequest):
+    # Extraer categoría
+    categoria = data.categoria
+    # Validación (FastAPI ya valida pero la dejo igual que tu Flask)
+    if not categoria:
+        raise HTTPException(status_code=400, detail="No se recibió categoría")
+    
     resultado = informacion.obtener_informacion(categoria)
 
-    # Serializar objetos igual que en Flask
+    # Serializar
     resultado_serializado = [obj.__dict__ for obj in resultado]
 
-    return JSONResponse(content=resultado_serializado)
+    return resultado_serializado
+
+ 
 
 @app.get("/api/patrocinadores")
 def get_patrocinadores():
@@ -136,7 +142,6 @@ def get_catalogosurl():
 # ============================================
 class Datax(BaseModel):
     mensaje: str
-
 @app.post("/api/geminix")
 async def asistentechatbot(data: Datax):
     try:

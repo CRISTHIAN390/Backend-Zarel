@@ -291,6 +291,8 @@ def generar_respuesta_ia(consulta: str) -> str:
         - Si se menciona luminares, radio o radio luminares, responde con información oficial de la radio.
         - Si no se menciona nada relacionado con la radio, responde con conocimiento general.
         - Si preguntan quién es el desarrollador, responde incluyendo este enlace 👉 https://play.google.com/store/apps/dev?id=7894508111389002888&hl=es.
+        
+        Responde siempre con claridad y amabilidad y se breve.
         """
 
         # Llamada correcta al nuevo modelo

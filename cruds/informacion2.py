@@ -80,18 +80,14 @@ def generar_respuesta_ia(consulta: str) -> str:
         - Total con 5% de descuento: S/ XXX.XX
         - Total con 10% de descuento: S/ XXX.XX
 
-        Responde siempre con claridad y amabilidad, como si estuvieras ayudando a un cliente en persona.
+        Responde siempre con claridad y amabilidad y se breve.
         """
 
         # Llamada correcta al nuevo modelo
         response = client.models.generate_content(
             model="gemini-2.5-flash",
             contents=prompt,
-            config=types.GenerateContentConfig(
-                temperature=0.7,
-                top_p=0.95,
-                top_k=40
-            )
+            config=types.GenerateContentConfig(temperature=0.7,top_p=0.95,top_k=40)
         )
 
         texto = response.text  # ✔ forma correcta de leer el texto

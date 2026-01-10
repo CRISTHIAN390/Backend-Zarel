@@ -297,11 +297,7 @@ def generar_respuesta_ia(consulta: str) -> str:
         response = client.models.generate_content(
             model="gemini-2.5-flash",
             contents=prompt,
-            config=types.GenerateContentConfig(
-            temperature=0.7,
-            top_p=0.95,
-            top_k=40
-            )
+            config=types.GenerateContentConfig(temperature=0.7,top_p=0.95,top_k=40)
         )
 
         texto = response.text  # ✔ forma correcta de leer el texto

@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 import os
 # Tus cruds
-from cruds import informacion, patrocinador, catalogo, informacion2
+from cruds import informacion, patrocinador, catalogo, informacion2, informacionlinea
 
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
@@ -149,6 +149,14 @@ async def asistentechatbot(data: Datax):
         return {"respuesta": respuesta}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+@app.post("/api/geminix/linea")
+async def asistentechatbot(data: Datax):
+    try:
+        respuesta = informacionlinea.asistentechatbot(data.mensaje)
+        return {"respuesta": respuesta}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))    
 
 
 @app.post("/api/geminix2")

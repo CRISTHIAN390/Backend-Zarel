@@ -43,7 +43,7 @@ def generar_respuesta_ia(eventos: str) -> str:
                 Genera una advertencia automática preventiva para el conductor.
 
                 Reglas obligatorias:
-                - Integra todos los eventos de forma natural dentro de una sola frase.
+                - Integra todos los eventos de forma natural en un párrafo coherente de 2 a 3 oraciones.
                 - No enumeres ni uses formato de lista.
                 - No menciones sistemas ni tecnología.
                 - No uses términos técnicos como "geocerca" o "tramo".

@@ -34,25 +34,25 @@ def generar_respuesta_ia(eventos: str) -> str:
 
         # Prompt completo con contexto de la lista de eventos
         prompt = f"""
-        Actúa como un asistente profesional de conducción.
+                Actúa como un asistente profesional de conducción.
 
-        Contexto:
-        El vehículo se aproxima a los siguientes eventos viales:
-        {eventos}
+                Contexto:
+                El vehículo se aproxima a los siguientes eventos viales:
+                {eventos}
 
-        Genera una advertencia automática preventiva para el conductor.
+                Genera una advertencia automática preventiva para el conductor.
 
-        Reglas obligatorias:
-        - No menciones el nombre del sistema.
-        - No uses términos técnicos como "geocerca".
-        - No agregues palabras que no estén en los eventos.
-        - No enumeres en formato de lista.
-        - Integra los eventos en una sola frase fluida.
-        - Mantén el mensaje breve, claro y agradable.
-        - Usa un tono profesional y natural.
-        
-        El mensaje debe sonar como un sistema moderno de navegación.
-        """
+                Reglas obligatorias:
+                - No menciones el nombre del sistema.
+                - No uses términos técnicos como "geocerca".
+                - No agregues palabras que no estén en los eventos.
+                - No enumeres en formato de lista.
+                - Integra los eventos en una sola frase fluida.
+                - Mantén el mensaje breve, claro y agradable.
+                - Usa un tono profesional y natural.
+                
+                El mensaje debe sonar como un sistema moderno de navegación.
+                """
         # Llamada correcta al nuevo modelo
         response = client.models.generate_content(
             model="gemini-2.5-flash",

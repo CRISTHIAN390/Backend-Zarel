@@ -43,15 +43,15 @@ def generar_respuesta_ia(eventos: str) -> str:
                 Genera una advertencia automática preventiva para el conductor.
 
                 Reglas obligatorias:
-                - No menciones el nombre del sistema.
-                - No uses términos técnicos como "geocerca".
-                - No agregues palabras que no estén en los eventos.
-                - No enumeres en formato de lista.
-                - Integra los eventos en una sola frase fluida.
+                - Integra todos los eventos de forma natural dentro de una sola frase.
+                - No enumeres ni uses formato de lista.
+                - No menciones sistemas ni tecnología.
+                - No uses términos técnicos como "geocerca" o "tramo".
+                - No agregues información que no esté presente en los eventos.
                 - Mantén el mensaje breve, claro y agradable.
-                - Usa un tono profesional y natural.
+                - Usa un tono moderno, amigable y natural, como una app moderna de navegación.
                 
-                El mensaje debe sonar como un sistema moderno de navegación.
+                La respuesta debe ser solo la frase final, sin explicaciones.
                 """
         # Llamada correcta al nuevo modelo
         response = client.models.generate_content(

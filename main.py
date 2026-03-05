@@ -150,10 +150,14 @@ async def asistentechatbot(data: Datax):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
+class Datax2(BaseModel):
+    mensaje: str
+    evento: int
+
 @app.post("/api/geminix/linea")
-async def asistentechatbot(data: Datax):
+async def asistentechatbot(data: Datax2):
     try:
-        respuesta = informacionlinea.asistentechatbot(data.mensaje)
+        respuesta = informacionlinea.asistentechatbot(data.mensaje,data.evento)
         return {"respuesta": respuesta}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))    
